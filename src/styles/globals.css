@@ -1,42 +1,402 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+
+    /*##############*/
+    /*# PRIMITIVES #*/
+    /*##############*/
+
+    /*COLORS*/
+    --color-black-1: rgba(27, 36, 54, 1);
+    --color-black-2: rgba(90, 97, 114, 1);
+    --color-black-3: rgba(138, 143, 156, 1);
+
+    --color-grey-1: rgba(238, 241, 246, 1);
+    --color-grey-2: rgba(169, 178, 196, 1);
+
+    --color-blue-1: rgba(20, 33, 59, 1);
+    --color-blue-2: rgba(13, 23, 48, 1);
+    --color-blue-3: rgba(29, 46, 77, 1);
+    --color-blue-4: rgba(39, 71, 201, 1);
+    --color-blue-5: rgba(58, 99, 232, 1);
+    --color-blue-6: rgba(26, 50, 144, 1);
+
+    --color-white-1: rgba(246, 241, 231, 1);
+    --color-white-2: rgba(251, 248, 241, 1);
+    --color-white-3: rgba(239, 231, 214, 1);
+
+    --color-gold-1: rgba(226, 216, 196, 1);
+    --color-gold-2: rgba(169, 134, 63, 1);
+    --color-gold-3: rgba(194, 162, 98, 1);
+
+    --color-transparent-1: rgba(169, 134, 63, 0.34);
+
+
+    /*DIMENSIONS*/
+    --dimension-0: 0px;
+    --dimension-1: 8px;
+    --dimension-2: 16px;
+    --dimension-3: 24px;
+    --dimension-4: 32px;
+    --dimension-5: 40px;
+    --dimension-6: 48px;
+    --dimension-7: 56px;
+    --dimension-8: 64px;
+    --dimension-9: 72px;
+    --dimension-10: 80px;
+    --dimension-11: 88px;
+    --dimension-12: 96px;
+    --dimension-13: 104px;
+    --dimension-14: 112px;
+    --dimension-15: 120px;
+    --dimension-16: 128px;
+    --dimension-17: 136px;
+    --dimension-18: 144px;
+    --dimension-19: 152px;
+    --dimension-20: 160px;
+
+
+    /*RADIUS*/
+    --radius-1: 5px;
+    --radius-2: 10px;
+    --radius-3: 15px;
+
+    /*##############*/
+    /*# TYPOGRAPHY #*/
+    /*##############*/
+
+    --font-size-h1: 3.585rem;
+    --font-size-h2: 2.986rem;
+    --font-size-h3: 2.488rem;
+    --font-size-h4: 2.074rem;
+    --font-size-h5: 1.728rem;
+    --font-size-h6: 1.44rem;
+    --font-size-l: 1.2rem;
+    --font-size-m: 1rem;
+    --font-size-s: 0.83rem;
+
+    --font-weight-bold: 800;
+    --font-size-medium: 400;
+    --font-weight-light: 100;
+
+    --line-height-normal: 1.5;
+    --line-height-heading: 1.2;
+
+    --font-family-serif: "Playfair Display";
+    --font-family-sans: "Spurce Sasn 3";
+
+    /*###########*/
+    /*# SPACING #*/
+    /*###########*/
+
+    /*CONTAINER WIDTH*/
+    --container-width-l: 1280px;
+    --container-width-m: 1024px;
+    --container-width-s: 768px;
+
+    /*PAGE PADDING*/
+    --padding-page: var(--dimension-3);
+
+    @media screen and (min-width: 480px) {
+        * {
+            --padding-page: var(--dimension-6);
+        }
+    }
+
+    --padding-section-l: var(--dimension-5);
+    --padding-section-m: var(--dimension-4);
+    --padding-section-s: var(--dimension-2);
+
+    @media screen and (min-width: 480px) {
+        * {
+            --padding-global: var(--dimension-6);
+        }
+    }
+
+    /*MAX WIDTH*/
+    --max-width-xxl: 1280px;
+    --max-width-xl: 1024px;
+    --max-width-l: 768px;
+    --max-widht-m: 560px;
+    --max-width-s: 480px;
+    --max-width-xs: 400px;
+    --max-width-xxs: 320px;
+    --max-widht-tiny: 200;
+
+    /*#####################*/
+    /*# UNIVERSAL STYLING #*/
+    /*#####################*/
+
+    font-size: var(--font-size-m);
+    font-weight: var(--font-size-medium);
+    line-height: var(--line-height-normal);
+    font-family: var(--font-family-sans), sans-serif;
 }
+
+/*#######################*/
+/*# TYPOGRAPHIC EFFECTS #*/
+/*#######################*/
+
+
+/*h1*/
+
+.heading1Sans {
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-size-medium);
+    line-height: var(--line-height-heading);
+    font-family: var(--font-family-sans), sans-serif;
+}
+
+.heading1Serif {
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-size-medium);
+    line-height: var(--line-height-heading);
+    font-family: var(--font-family-serif), serif;
+}
+
+
+/*h2*/
+
+.heading2Sans {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-size-medium);
+    line-height: var(--line-height-heading);
+    font-family: var(--font-family-sans), sans-serif;
+}
+
+.heading2Serif {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-size-medium);
+    line-height: var(--line-height-heading);
+    font-family: var(--font-family-serif), serif;
+}
+
+
+/*h3*/
+
+.heading3Sans {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-size-medium);
+    line-height: var(--line-height-heading);
+    font-family: var(--font-family-sans), sans-serif;
+}
+
+
+.heading3Serif {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-size-medium);
+    line-height: var(--line-height-heading);
+    font-family: var(--font-family-serif), serif;
+}
+
+/*h4*/
+
+.heading4Sans {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-size-medium);
+    line-height: var(--line-height-heading);
+    font-family: var(--font-family-sans), sans-serif;
+}
+
+.heading4Serif {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-size-medium);
+    line-height: var(--line-height-heading);
+    font-family: var(--font-family-serif), serif;
+}
+
+/*h5*/
+
+.heading5Sans {
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-size-medium);
+    line-height: var(--line-height-heading);
+    font-family: var(--font-family-sans), sans-serif;
+}
+
+.heading5Serif {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-size-medium);
+    line-height: var(--line-height-heading);
+    font-family: var(--font-family-sans), serif;
+}
+
+
+/*h6*/
+
+.heading6Sans {
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-size-medium);
+    line-height: var(--line-height-heading);
+    font-family: var(--font-family-sans), sans-serif;
+}
+
+.heading6Serif {
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-size-medium);
+    line-height: var(--line-height-heading);
+    font-family: var(--font-family-serif), serif;
+}
+
+
+/*BOLD*/
+
+.boldLSerif {
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-serif), serif;
+}
+
+.boldNSerif {
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-serif), serif;
+}
+
+.boldSSerif {
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-serif), serif;
+}
+
+.boldLSans {
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-sans), sans-serif;
+}
+
+.boldNSans {
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-sans), sans-serif;
+}
+
+.boldSSans {
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-sans), sans-serif;
+}
+
+/*REGULAR*/
+
+.normalLSans {
+    font-size: var(--font-size-l);
+    font-weight: var(--font-size-medium);
+    font-family: var(--font-family-serif), serif;
+}
+
+.normalNSans {
+    font-size: var(--font-size-m);
+    font-weight: var(--font-size-medium);
+    font-family: var(--font-family-serif), serif;
+}
+
+.normalSSans {
+    font-size: var(--font-size-s);
+    font-weight: var(--font-size-medium);
+    font-family: var(--font-family-serif), serif;
+}
+
+.normalLSerif {
+    font-size: var(--font-size-l);
+    font-weight: var(--font-size-medium);
+    font-family: var(--font-family-sans), sans-serif;
+}
+
+.normalNSerif {
+    font-size: var(--font-size-m);
+    font-weight: var(--font-size-medium);
+    font-family: var(--font-family-sans), sans-serif;
+}
+
+.normalSSerif {
+    font-size: var(--font-size-s);
+    font-weight: var(--font-size-medium);
+    font-family: var(--font-family-sans), sans-serif;
+}
+
+/*LIGHT*/
+
+.lightLSerif {
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-light);
+    font-family: var(--font-family-serif), serif;
+}
+
+.lightNSerif {
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-light);
+    font-family: var(--font-family-serif), serif;
+}
+
+.lightSSerif {
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-light);
+    font-family: var(--font-family-serif), serif;
+}
+
+.lightLSans {
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-light);
+    font-family: var(--font-family-sans), sans-serif;
+}
+
+.lightNSans {
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-light);
+    font-family: var(--font-family-sans), sans-serif;
+}
+
+.lightSSans {
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-light);
+    font-family: var(--font-family-sans), sans-serif;
+}
+
+
+/*#################*/
+/*# COLOR SCHEMES #*/
+/*#################*/
+
+.colorScheme1 {
+    --color-background: var(--color-white-1);
+    --color-foreground: var(--color-white-2);
+    --color-text-primary: var(--color-black-1);
+    --color-text-secondary: var(--color-black-3);
+    --color-border: var(--color-transparent-1);
+    --color-accent: var(--color-gold-2);
+}
+
+.colorScheme2 {
+    --color-background: var(--color-white-3);
+    --color-foreground: var(--color-white-2);
+    --color-text-primary: var(--color-black-1);
+    --color-text-secondary: var(--color-black-3);
+    --color-border: var(--color-transparent-1);
+    --color-accent: var(--color-gold-2);
+}
+
+.colorScheme3 {
+    --color-background: var(--color-blue-1);
+    --color-foreground: var(--color-blue-2);
+    --color-text-primary: var(--color-grey-1);
+    --color-text-secondary: var(--color-grey-2);
+    --color-border: var(--color-transparent-1);
+    --color-accent: var(--color-gold-2);
+}
+
+/*##################*/
+/*# GLOBAL STYLING #*/
+/*##################*/
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    cursor: pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+button {
+    all: unset;
 }
