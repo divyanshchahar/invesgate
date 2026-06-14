@@ -85,7 +85,7 @@
     --line-height-heading: 1.2;
 
     --font-family-cursive: "Playfair Display";
-    --font-family-sans: "Spurce Sasn 3";
+    --font-family-straight: "Spurce Sasn 3";
 
     /*###########*/
     /*# SPACING #*/
@@ -132,7 +132,7 @@
     font-size: var(--font-size-m);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-normal);
-    font-family: var(--font-family-sans), sans-serif;
+    font-family: var(--font-family-straight), sans-serif;
 }
 
 /*#######################*/
@@ -146,7 +146,7 @@
     font-size: var(--font-size-h1);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
-    font-family: var(--font-family-sans), sans-serif;
+    font-family: var(--font-family-straight), sans-serif;
 }
 
 .heading1Serif {
@@ -163,7 +163,7 @@
     font-size: var(--font-size-h2);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
-    font-family: var(--font-family-sans), sans-serif;
+    font-family: var(--font-family-straight), sans-serif;
 }
 
 .heading2Serif {
@@ -180,7 +180,7 @@
     font-size: var(--font-size-h3);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
-    font-family: var(--font-family-sans), sans-serif;
+    font-family: var(--font-family-straight), sans-serif;
 }
 
 
@@ -197,7 +197,7 @@
     font-size: var(--font-size-h4);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
-    font-family: var(--font-family-sans), sans-serif;
+    font-family: var(--font-family-straight), sans-serif;
 }
 
 .heading4Serif {
@@ -213,14 +213,14 @@
     font-size: var(--font-size-h5);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
-    font-family: var(--font-family-sans), sans-serif;
+    font-family: var(--font-family-straight), sans-serif;
 }
 
 .heading5Serif {
     font-size: var(--font-size-h4);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
-    font-family: var(--font-family-sans), serif;
+    font-family: var(--font-family-straight), serif;
 }
 
 
@@ -230,7 +230,7 @@
     font-size: var(--font-size-h5);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
-    font-family: var(--font-family-sans), sans-serif;
+    font-family: var(--font-family-straight), sans-serif;
 }
 
 .heading6Serif {
@@ -264,19 +264,19 @@
 .boldLSans {
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-bold);
-    font-family: var(--font-family-sans), sans-serif;
+    font-family: var(--font-family-straight), sans-serif;
 }
 
 .boldNSans {
     font-size: var(--font-size-m);
     font-weight: var(--font-weight-bold);
-    font-family: var(--font-family-sans), sans-serif;
+    font-family: var(--font-family-straight), sans-serif;
 }
 
 .boldSSans {
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-bold);
-    font-family: var(--font-family-sans), sans-serif;
+    font-family: var(--font-family-straight), sans-serif;
 }
 
 /*REGULAR*/
@@ -302,19 +302,19 @@
 .normalLSerif {
     font-size: var(--font-size-l);
     font-weight: var(--font-size-medium);
-    font-family: var(--font-family-sans), sans-serif;
+    font-family: var(--font-family-straight), sans-serif;
 }
 
 .normalNSerif {
     font-size: var(--font-size-m);
     font-weight: var(--font-size-medium);
-    font-family: var(--font-family-sans), sans-serif;
+    font-family: var(--font-family-straight), sans-serif;
 }
 
 .normalSSerif {
     font-size: var(--font-size-s);
     font-weight: var(--font-size-medium);
-    font-family: var(--font-family-sans), sans-serif;
+    font-family: var(--font-family-straight), sans-serif;
 }
 
 /*LIGHT*/
@@ -340,19 +340,19 @@
 .lightLSans {
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-light);
-    font-family: var(--font-family-sans), sans-serif;
+    font-family: var(--font-family-straight), sans-serif;
 }
 
 .lightNSans {
     font-size: var(--font-size-m);
     font-weight: var(--font-weight-light);
-    font-family: var(--font-family-sans), sans-serif;
+    font-family: var(--font-family-straight), sans-serif;
 }
 
 .lightSSans {
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-light);
-    font-family: var(--font-family-sans), sans-serif;
+    font-family: var(--font-family-straight), sans-serif;
 }
 
 
