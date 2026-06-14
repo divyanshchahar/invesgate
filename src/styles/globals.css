@@ -142,14 +142,14 @@
 
 /*h1*/
 
-.heading1Sans {
+.heading1Straight {
     font-size: var(--font-size-h1);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
     font-family: var(--font-family-straight), sans-serif;
 }
 
-.heading1Serif {
+.heading1Cursive {
     font-size: var(--font-size-h1);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
@@ -159,14 +159,14 @@
 
 /*h2*/
 
-.heading2Sans {
+.heading2Straight {
     font-size: var(--font-size-h2);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
     font-family: var(--font-family-straight), sans-serif;
 }
 
-.heading2Serif {
+.heading2Cursive {
     font-size: var(--font-size-h2);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
@@ -176,7 +176,7 @@
 
 /*h3*/
 
-.heading3Sans {
+.heading3Straight {
     font-size: var(--font-size-h3);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
@@ -184,7 +184,7 @@
 }
 
 
-.heading3Serif {
+.heading3Cursive {
     font-size: var(--font-size-h3);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
@@ -193,14 +193,14 @@
 
 /*h4*/
 
-.heading4Sans {
+.heading4Straight {
     font-size: var(--font-size-h4);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
     font-family: var(--font-family-straight), sans-serif;
 }
 
-.heading4Serif {
+.heading4Cursive {
     font-size: var(--font-size-h4);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
@@ -209,14 +209,14 @@
 
 /*h5*/
 
-.heading5Sans {
+.heading5Straight {
     font-size: var(--font-size-h5);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
     font-family: var(--font-family-straight), sans-serif;
 }
 
-.heading5Serif {
+.heading5Cursive {
     font-size: var(--font-size-h4);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
@@ -226,14 +226,14 @@
 
 /*h6*/
 
-.heading6Sans {
+.heading6Straight {
     font-size: var(--font-size-h5);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
     font-family: var(--font-family-straight), sans-serif;
 }
 
-.heading6Serif {
+.heading6Cursive {
     font-size: var(--font-size-h5);
     font-weight: var(--font-size-medium);
     line-height: var(--line-height-heading);
@@ -243,37 +243,37 @@
 
 /*BOLD*/
 
-.boldLSerif {
+.boldLCursive {
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-bold);
     font-family: var(--font-family-cursive), serif;
 }
 
-.boldNSerif {
+.boldNCursive {
     font-size: var(--font-size-m);
     font-weight: var(--font-weight-bold);
     font-family: var(--font-family-cursive), serif;
 }
 
-.boldSSerif {
+.boldSCursive {
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-bold);
     font-family: var(--font-family-cursive), serif;
 }
 
-.boldLSans {
+.boldLStraight {
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-bold);
     font-family: var(--font-family-straight), sans-serif;
 }
 
-.boldNSans {
+.boldNStraight {
     font-size: var(--font-size-m);
     font-weight: var(--font-weight-bold);
     font-family: var(--font-family-straight), sans-serif;
 }
 
-.boldSSans {
+.boldSStraight {
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-bold);
     font-family: var(--font-family-straight), sans-serif;
@@ -281,37 +281,37 @@
 
 /*REGULAR*/
 
-.normalLSans {
+.normalLStraight {
     font-size: var(--font-size-l);
     font-weight: var(--font-size-medium);
     font-family: var(--font-family-cursive), serif;
 }
 
-.normalNSans {
+.normalNStraight {
     font-size: var(--font-size-m);
     font-weight: var(--font-size-medium);
     font-family: var(--font-family-cursive), serif;
 }
 
-.normalSSans {
+.normalSStraight {
     font-size: var(--font-size-s);
     font-weight: var(--font-size-medium);
     font-family: var(--font-family-cursive), serif;
 }
 
-.normalLSerif {
+.normalLCursive {
     font-size: var(--font-size-l);
     font-weight: var(--font-size-medium);
     font-family: var(--font-family-straight), sans-serif;
 }
 
-.normalNSerif {
+.normalNCursive {
     font-size: var(--font-size-m);
     font-weight: var(--font-size-medium);
     font-family: var(--font-family-straight), sans-serif;
 }
 
-.normalSSerif {
+.normalSCursive {
     font-size: var(--font-size-s);
     font-weight: var(--font-size-medium);
     font-family: var(--font-family-straight), sans-serif;
@@ -319,37 +319,37 @@
 
 /*LIGHT*/
 
-.lightLSerif {
+.lightLCursive {
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-light);
     font-family: var(--font-family-cursive), serif;
 }
 
-.lightNSerif {
+.lightNCursive {
     font-size: var(--font-size-m);
     font-weight: var(--font-weight-light);
     font-family: var(--font-family-cursive), serif;
 }
 
-.lightSSerif {
+.lightSCursive {
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-light);
     font-family: var(--font-family-cursive), serif;
 }
 
-.lightLSans {
+.lightLStraight {
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-light);
     font-family: var(--font-family-straight), sans-serif;
 }
 
-.lightNSans {
+.lightNStraight {
     font-size: var(--font-size-m);
     font-weight: var(--font-weight-light);
     font-family: var(--font-family-straight), sans-serif;
 }
 
-.lightSSans {
+.lightSStraight {
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-light);
     font-family: var(--font-family-straight), sans-serif;
