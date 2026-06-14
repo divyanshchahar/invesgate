@@ -1,0 +1,12 @@
+.container {
+    padding: var(--dimension-2);
+    cursor: pointer;
+
+    color: var(--color-white-1);
+
+    font-weight: var(--font-weight-bold);
+
+    border-radius: var(--radius-1);
+
+    background: linear-gradient(135deg, var(--color-blue-4) 0%, var(--color-blue-5) 100%);
+}
