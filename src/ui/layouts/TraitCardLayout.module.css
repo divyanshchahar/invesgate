@@ -1,0 +1,46 @@
+.container {
+    --text-primary-color: var(--color-text-primary);
+    --secondry-text-color: var(--color-text-secondary);
+    --foreground-color: var(--color-foreground);
+    --background-color: var(--color-background);
+    --accent-color: var(--color-accent);
+    --border-color: var(--color-border);
+
+    padding: var(--dimension-1);
+    color: var(--text-primary-color);
+    background-color: var(--foreground-color);
+
+    /*font-family: var(--font-family-sans);*/
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: var(--secondry-text-color);
+    }
+
+    .bigText {
+        font-size: var(--font-size-h6);
+        font-family: var(--font-family-cursive), serif;
+    }
+
+
+    .smallText {
+        font-size: var(--font-size-l);
+        font-family: var(--font-family-straight), sans-serif;
+    }
+
+    .bodyText {
+        color: var(--secondry-text-color);
+        font-weight: var(--font-weight-light);
+    }
+
+    .topMargin{
+        margin-top: var(--dimension-1);
+    }
+
+    svg {
+        height: var(--font-size-m);
+        color: var(--accent-color);
+    }
+}
