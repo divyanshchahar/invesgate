@@ -6,7 +6,7 @@ export default function ClockIconComponent({styling}: ClockIconComponentProps) {
     return (
         <svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
              className={styling}>
-            <g clip-path="url(#clip0_2026_308)">
+            <g clipPath="url(#clip0_2026_308)">
                 <path
                     d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z"
                     fill="currentColor"/>

@@ -6,7 +6,7 @@ export default function RealEstateIconComponent({styling}: RealEstateIconCompone
     return (
         <svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
              className={styling}>
-            <g clip-path="url(#clip0_2026_313)">
+            <g clipPath="url(#clip0_2026_313)">
                 <path d="M3.19995 11.4646H4.26662V13.0646H3.19995V11.4646Z" fill="currentColor"/>
                 <path d="M5.33325 11.4646H6.39992V13.0646H5.33325V11.4646Z" fill="currentColor"/>
                 <path

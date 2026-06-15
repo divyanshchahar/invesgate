@@ -1,4 +1,4 @@
-export interface HamburgerIconComponenttPropType {
+export interface HamburgerIconComponentPropType {
     styling?: string,
 }
 
