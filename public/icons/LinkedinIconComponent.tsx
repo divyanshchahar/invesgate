@@ -6,7 +6,7 @@ export default function LinkedinIconComponent({styling}: LinkedinIconComponentPr
     return (
         <svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
              className={styling}>
-            <g clip-path="url(#clip0_2060_1049)">
+            <g clipPath="url(#clip0_2060_1049)">
                 <path
                     d="M16 16.0001V10.1401C16 7.26006 15.38 5.06006 12.02 5.06006C10.4 5.06006 9.31997 5.94006 8.87997 6.78006H8.83997V5.32006H5.65997V16.0001H8.97997V10.7001C8.97997 9.30006 9.23997 7.96006 10.96 7.96006C12.66 7.96006 12.68 9.54006 12.68 10.7801V15.9801H16V16.0001Z"
                     fill="currentColor"/>

@@ -6,7 +6,7 @@ export default function TwitterIconComponent({styling}: TwitterComponentPropType
     return (
         <svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
              className={styling}>
-            <g clip-path="url(#clip0_2060_1047)">
+            <g clipPath="url(#clip0_2060_1047)">
                 <path
                     d="M9.48942 6.77491L15.3177 0H13.9366L8.87589 5.88256L4.83392 0H0.171997L6.28424 8.89547L0.171997 16H1.55319L6.89742 9.78782L11.166 16H15.828L9.48908 6.77491H9.48942ZM7.59768 8.97384L6.97839 8.08805L2.05086 1.03974H4.17229L8.14887 6.72795L8.76816 7.61374L13.9372 15.0075H11.8158L7.59768 8.97418V8.97384Z"
                     fill="currentColor"/>

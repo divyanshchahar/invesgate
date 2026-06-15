@@ -5,10 +5,10 @@ export interface EstatePlanningIconComponentPropTypes {
 export default function EstatePlanningIconComponent({styling}: EstatePlanningIconComponentPropTypes) {
     return (
         <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fillOpacity={0} className={styling}>
-            <g clip-path="url(#clip0_2026_312)">
+            <g clipPath="url(#clip0_2026_312)">
                 <path
                     d="M15.6875 6.10153V3.29628C15.6875 2.56415 15.094 1.97062 14.3618 1.97062H5.86309L5.42663 1.34437C5.25588 1.09937 4.97616 0.953369 4.67756 0.953369H1.63825C0.906063 0.953369 0.3125 1.54693 0.3125 2.27912V6.10153M2.16699 13H11.8006M1.57031 5.28512C1.57031 5.28512 1.57034 4.65912 1.57034 4.14762C1.57037 3.78743 1.86234 3.49562 2.22247 3.49562H13.7779C14.1381 3.49562 14.4301 3.78758 14.4301 4.14774V5.28512H1.57031ZM14.8699 5.28646C15.3214 5.28646 15.6875 5.65252 15.6875 6.10409V14.0452C15.6875 14.5984 15.2391 15.0468 14.6859 15.0468H1.314C0.760875 15.0468 0.3125 14.5984 0.3125 14.0453V6.10421C0.3125 5.65259 0.678625 5.28646 1.13025 5.28646H14.8699ZM10.3994 13H5.60059V9.76071H10.3994V13ZM11.0643 9.75777H4.93555L7.99989 6.76699L11.0643 9.75777ZM8.7862 13H7.21289V11.3426H8.7862V13Z"
-                    stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    stroke="currentColor" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
             </g>
         </svg>
 
