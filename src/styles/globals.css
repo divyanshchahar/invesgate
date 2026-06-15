@@ -111,7 +111,10 @@
 
     @media screen and (min-width: 480px) {
         * {
-            --padding-global: var(--dimension-6);
+            /*--padding-global: var(--dimension-6);*/
+            --padding-section-l: var(--dimension-10);
+            --padding-section-m: var(--dimension-8);
+            --padding-section-s: var(--dimension-4);
         }
     }
 
