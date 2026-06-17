@@ -1,0 +1,22 @@
+.container {
+    --backgroud-color: var(--color-background);
+    --foreground-color: var(--color-foreground);
+    --primary-text-color: var(--color-text-primary);
+    --secondary-text-color: var(--color-text-secondary);
+    --border-color: var(--color-border);
+
+    color: var(--secondary-text-color);
+
+    label {
+        color: var(--secondary-text-color);
+    }
+
+    input {
+        width: 100%;
+        padding: var(--dimension-1);
+        margin-top: var(--dimension-1);
+        border-radius: var(--radius-1);
+        border: 1px solid var(--color-border);
+        background-color: var(--color-grey-1)
+    }
+}
