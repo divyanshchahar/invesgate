@@ -4,7 +4,6 @@
     max-width: var(--max-width-s);
     background-color: var(--color-foreground);
     color: var(--color-text-primary);
-    margin:100px;
 
     border-radius: var(--radius-1);
     border: 2px solid var(--color-border);
