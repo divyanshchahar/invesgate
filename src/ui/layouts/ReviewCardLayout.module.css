@@ -1,0 +1,66 @@
+.container {
+    background-color: var(--color-foreground);
+    color: var(--color-text-primary);
+    border-radius: var(--radius-1);
+
+    padding: var(--dimension-4);
+
+    max-width: var(--max-width-s);
+
+    svg {
+        height: var(--dimension-4);
+    }
+
+    hr {
+        border: 1px solid var(--color-border);
+    }
+}
+
+.starContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--dimension-2);
+}
+
+.review {
+    font-family: var(--font-family-cursive), serif;
+    font-size: var(--font-size-l);
+}
+
+.image {
+    width: var(--dimension-6);
+    height: var(--dimension-6);
+    border-radius: 50%;
+}
+
+.name {
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-bold);
+}
+
+.designation {
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-light);
+    color: var(--color-text-secondary);
+
+    margin-top: var(--dimension-1);
+}
+
+.topMargin {
+    margin-top: var(--dimension-2);
+}
+
+.reviewersDetailContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--dimension-2);
+}
+
+.greyStar {
+    path {
+        fill: var(--color-text-secondary);
+        fill-opacity: 0.3;
+    }
+}
