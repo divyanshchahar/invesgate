@@ -1,0 +1,85 @@
+.accordionRoot {
+    max-width: var(--max-width-l); /* => variable controlled */
+    background-color: var(--color-background); /* => variable controlled */
+
+    display: flex;
+    flex-direction: column;
+    /*gap: var(--dimension-2);*/
+
+
+    width: 100%;
+
+    svg {
+        color: var(--color-accent);
+
+        height: var(--font-size-m);
+    }
+}
+
+.accordionItem {
+    overflow: hidden;
+
+    background-color: var(--color-foreground);
+    padding: var(--dimension-2);
+
+    border-top: 1px solid var(--color-border);
+    /*border-bottom: 1px solid var(--color-border);*/
+}
+
+.accordionItem:first-child {
+    margin-top: 0;
+    border-top: none;
+}
+
+/*.accordionItem:focus-within {*/
+/*    position: relative;*/
+/*    z-index: 1;*/
+/*    border: 1px solid var(--color-blue-4); !* => variable controlled *!*/
+/*}*/
+
+.accordionHeader {
+    all: unset;
+
+    display: flex;
+}
+
+.accordionHeader:hover {
+    color: var(--color-blue-6);
+}
+
+.accordionTrigger {
+    all: unset;
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-cursive), serif;
+}
+
+.accordionTrigger:hover {
+    cursor: pointer;
+}
+
+.accordionContent {
+    overflow: hidden;
+
+    text-align: left;
+
+    margin-top: var(--dimension-2);
+    color: var(--color-text-secondary);
+}
+
+.accordionChevron {
+    transition: transform 300ms cubic-bezier(0.87, 0, 0.13, 1);
+
+    height: var(--dimension-2); /* => add variable control */
+    width: var(--dimension-2); /* => add variable control */
+}
+
+.accordionTrigger[data-state="open"] > svg {
+    transform: rotate(180deg);
+}
