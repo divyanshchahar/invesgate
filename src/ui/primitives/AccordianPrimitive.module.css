@@ -20,7 +20,7 @@
     overflow: hidden;
 
     background-color: var(--color-foreground);
-    padding: var(--dimension-2);
+    padding: var(--dimension-2) 0;
 
     border-top: 1px solid var(--color-border);
     /*border-bottom: 1px solid var(--color-border);*/
