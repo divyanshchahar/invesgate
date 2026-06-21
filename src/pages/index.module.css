@@ -1,0 +1,27 @@
+.trustContainer {
+    padding: var(--padding-section-l) var(--padding-page) var(--dimension-5) var(--padding-page);
+
+    background-color: var(--color-background);
+}
+
+
+.flexBox {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    width: fit-content;
+    max-width: var(--max-width-xxl);
+}
+
+@media screen and (min-width: 480px) {
+    .flexBox {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+
+.fullwidth {
+    width: 100%;
+}
