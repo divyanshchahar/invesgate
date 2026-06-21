@@ -1,0 +1,125 @@
+.iconCarrier {
+    div {
+        line-height: 0;
+
+        width: fit-content;
+        padding: var(--dimension-1);
+
+        border: 1px solid var(--color-text-primary);
+        border-radius: 50%;
+
+        svg {
+            height: var(--font-size-m);
+        }
+    }
+}
+
+.linkCarrier {
+    flex-shrink: 0;
+    max-width: fit-content;
+
+    a {
+        display: block;
+    }
+}
+
+.paddingTopSmall {
+    padding-top: var(--dimension-3);
+}
+
+.officeDetails {
+    max-width: var(--max-width-xxs);
+}
+
+.container {
+    background-color: var(--color-blue-2);
+    color: var(--color-text-primary);
+
+    padding: var(--padding-section-l) var(--padding-page);
+
+    hr {
+        border: 1px solid var(--color-border);
+        margin-top: var(--dimension-6);
+    }
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dimension-6);
+    max-width: var(--max-width-xxl);
+    margin: auto;
+}
+
+@media screen and (min-width: 894px) {
+    .top {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1144px) {
+    .top {
+        gap: var(--dimension-20);
+    }
+}
+
+.iconAndSocialMedia {
+    margin: auto;
+    max-width: fit-content;
+}
+
+@media screen and (min-width: 894px) {
+    .iconAndSocialMedia {
+        margin: 0;
+    }
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: row;
+    gap: var(--dimension-2);
+    justify-content: center;
+    margin-top: var(--dimension-6);
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dimension-5);
+    flex-grow: 1;
+}
+
+@media screen and (min-width: 802px) {
+    .textContainer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+}
+
+@media screen and (min-width: 894px) {
+    .textContainer {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+.paddingTopLarge {
+    padding-top: var(--dimension-6);
+}
+
+.centerAlignedText {
+    text-align: center;
+}
+
+.secondaryText {
+    color: var(--color-text-secondary);
+}
+
+.accentText {
+    color: var(--color-accent);
+}
+
+
+
