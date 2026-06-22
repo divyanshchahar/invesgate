@@ -24,9 +24,18 @@ interface StatSectionPropTypes {
     statCards: StatCardLayoutPropTypes[]
 }
 
+// ###############
+// # COLORSCHEME #
+// ###############
+
 const trustColorScheme = "colorScheme1"
 const statSectionColorScheme = trustColorScheme
+const philisphySectionColorScheme = "colorScheme3"
 
+
+// #########
+// # PROPS #
+// #########
 const trustSectionProps = {
     colorScheme: trustColorScheme,
     traitCards: [{
@@ -98,6 +107,10 @@ const statSectionProps = {
         styling: styles.statCard
     }]
 }
+
+// ############
+// # SECTIONS #
+// ############
 
 const TrustSection = ({traitCards, colorScheme}: TrustSectionPropTypes) => {
     return (
