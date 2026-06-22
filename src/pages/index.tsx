@@ -23,6 +23,7 @@ import CTAButton from "@/ui/components/CTAButton";
 import meetingImage from "../../public/images/old_meeting.png"
 import HeroSectionLayout from "@/ui/layouts/HeroSectionLayout";
 import Image from "next/image";
+import CTALayout from "@/ui/layouts/CTALayout";
 
 
 // #########
@@ -446,6 +447,8 @@ export default function Home() {
             <CompariosonSection/>
 
             <MeetingSection/>
+
+            <CTALayout version={"home"}/>
 
         </div>
     )
