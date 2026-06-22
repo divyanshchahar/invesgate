@@ -227,6 +227,7 @@
     margin: auto;
 
     border-radius: var(--radius-1);
+    overflow: hidden;
 }
 
 @media screen and (min-width: 480px) {
@@ -246,8 +247,6 @@
 
 @media screen and (min-width: 1030px) {
     .meetingDetailsContainer {
-        /*flex-direction: row;*/
-        /*flex-wrap: wrap;*/
         padding: var(--dimension-6);
         gap: var(--dimension-4);
     }
