@@ -7,6 +7,9 @@ import VerifiedIconComponent from "../../public/icons/VerifiedIconComponent";
 import styles from "./index.module.css"
 import StatCardLayout, {StatCardLayoutPropTypes} from "@/ui/layouts/StatCardLayout";
 import HeadingLayout from "@/ui/layouts/HeadingLayout";
+import PhilosphyCardLayout, {PhilosphyCardLayoutProptypes} from "@/ui/layouts/PhilosphyCardLayout";
+import {ReactElement} from "react";
+
 
 // #########
 // # TYPES #
@@ -19,9 +22,16 @@ interface TrustSectionPropTypes {
 
 interface StatSectionPropTypes {
     colorScheme: string,
-    heading: string,
+    heading: ReactElement,
     accentText: string,
     statCards: StatCardLayoutPropTypes[]
+}
+
+interface PhilosphySectionPropTypes {
+    accentText: string,
+    headingText: ReactElement,
+    philosphyCards: PhilosphyCardLayoutProptypes[]
+    colorScheme: string,
 }
 
 // ###############
@@ -108,6 +118,28 @@ const statSectionProps = {
     }]
 }
 
+const philosphySectionProps: PhilosphySectionPropTypes = {
+    colorScheme: philisphySectionColorScheme,
+    accentText: "OUR INVESTMENT PHILOSPHY",
+    headingText: <p>Successful investing is a discipline of <span>temperament </span>, not timing.</p>,
+    philosphyCards: [{
+        serial: "1",
+        trait: "Courage",
+        description: "The courage to buy what others won't — to act with conviction when the crowd retreats and value is greatest.",
+        colorScheme: philisphySectionColorScheme
+    }, {
+        serial: "2",
+        trait: "Vision",
+        description: "The vision to see what others can't — to recognise enduring quality and opportunity before it becomes consensus.",
+        colorScheme: philisphySectionColorScheme
+    }, {
+        serial: "3",
+        trait: "Patience",
+        description: "The patience to hold when others sell — to let compounding and time do the work that impulse undoes.",
+        colorScheme: philisphySectionColorScheme
+    }]
+}
+
 // ############
 // # SECTIONS #
 // ############
@@ -153,6 +185,26 @@ const StatSection = ({colorScheme, heading, accentText, statCards}: StatSectionP
     </div>);
 }
 
+const PhilosphySection = ({accentText, headingText, colorScheme, philosphyCards}: PhilosphySectionPropTypes) => {
+    return <div className={`${colorScheme} ${styles.paddedSection}`}>
+
+        <div className={`${styles.maxWidthContainer}`}>
+
+            <HeadingLayout colorScheme={colorScheme} heading={headingText} accentText={accentText}
+                           textAlignment={"left"}/>
+
+            <div className={`${styles.flexBox0}`}>
+                {philosphyCards.map((philosphyCard, i) => {
+                    return (
+                        <PhilosphyCardLayout key={i} serial={philosphyCard.serial}
+                                             colorScheme={philosphyCard.colorScheme}
+                                             description={philosphyCard.description} trait={philosphyCard.trait}/>)
+                })}
+            </div>
+        </div>
+    </div>
+}
+
 export default function Home() {
     return (
         <div>
@@ -162,6 +214,11 @@ export default function Home() {
 
             <StatSection colorScheme={statSectionProps.colorScheme} heading={statSectionProps.heading}
                          accentText={statSectionProps.accentText} statCards={statSectionProps.statCards}/>
+
+            <PhilosphySection accentText={philosphySectionProps.accentText}
+                              headingText={philosphySectionProps.headingText}
+                              philosphyCards={philosphySectionProps.philosphyCards}
+                              colorScheme={philosphySectionProps.colorScheme}/>
         </div>
     );
 }

@@ -86,3 +86,33 @@
         gap: var(--dimension-10);
     }
 }
+
+.paddedSection {
+    background-color: var(--color-background);
+
+    padding: var(--padding-section-l) var(--padding-page);
+}
+
+.flexBox0 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    gap: var(--dimension-5);
+    margin-top: var(--dimension-5);
+}
+
+@media screen and (min-width: 480px) {
+    .flexBox0 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--dimension-10);
+    }
+}
+
+.maxWidthContainer{
+    max-width: var(--max-width-xxl);
+    margin: auto;
+}
+
