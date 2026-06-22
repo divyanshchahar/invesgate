@@ -25,3 +25,64 @@
 .fullwidth {
     width: 100%;
 }
+
+.statCard {
+    border-bottom: 1px solid var(--color-border);
+}
+
+
+.statCard:last-child {
+    border-bottom: none;
+}
+
+@media screen and (min-width: 872px) {
+    .statCard {
+        border-bottom: none;
+        border-right: 1px solid var(--color-border);
+    }
+
+    .statCard:last-child {
+        border: none;
+    }
+}
+
+
+.statContainer {
+    background-color: var(--color-background);
+    padding: var(--dimension-5) var(--padding-page) var(--padding-section-l) var(--padding-page);
+}
+
+.flexBox2 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    max-width: var(--max-width-xxl);
+}
+
+@media screen and (min-width: 872px) {
+    .flexBox2 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    max-width: var(--max-width-xxl);
+    gap: var(--dimension-5);
+}
+
+@media screen and (min-width: 480px) {
+    .flexContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--dimension-10);
+    }
+}

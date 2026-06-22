@@ -5,6 +5,8 @@ import CompassIconComponent from "../../public/icons/CompassIconComponent";
 import ClockIconComponent from "../../public/icons/ClockIconComponent";
 import VerifiedIconComponent from "../../public/icons/VerifiedIconComponent";
 import styles from "./index.module.css"
+import StatCardLayout, {StatCardLayoutPropTypes} from "@/ui/layouts/StatCardLayout";
+import HeadingLayout from "@/ui/layouts/HeadingLayout";
 
 // #########
 // # TYPES #
@@ -15,8 +17,15 @@ interface TrustSectionPropTypes {
     traitCards: TraitCardLayoutPropTypes[],
 }
 
+interface StatSectionPropTypes {
+    colorScheme: string,
+    heading: string,
+    accentText: string,
+    statCards: StatCardLayoutPropTypes[]
+}
 
 const trustColorScheme = "colorScheme1"
+const statSectionColorScheme = trustColorScheme
 
 const trustSectionProps = {
     colorScheme: trustColorScheme,
@@ -56,9 +65,38 @@ const trustSectionProps = {
             colorScheme: trustColorScheme,
             styling: styles.fullwidth
         },
-
-
     ],
+}
+
+const statSectionProps = {
+    colorScheme: statSectionColorScheme,
+    heading: <p>A record measured in trust, not noise</p>,
+    accentText: "BY THE NUMBER",
+    statCards: [{
+        bigText: "₹ 850",
+        accentText: "cr",
+        description: "Assets Under Management",
+        colorScheme: statSectionColorScheme,
+        styling: styles.statCard
+    }, {
+        bigText: "300",
+        accentText: "+",
+        description: "Families Guided",
+        colorScheme: statSectionColorScheme,
+        styling: styles.statCard
+    }, {
+        bigText: "24",
+        accentText: "yrs",
+        description: "Combined Experiance",
+        colorScheme: statSectionColorScheme,
+        styling: styles.statCard
+    }, {
+        bigText: "98",
+        accentText: "%",
+        description: "Client Retention",
+        colorScheme: statSectionColorScheme,
+        styling: styles.statCard
+    }]
 }
 
 const TrustSection = ({traitCards, colorScheme}: TrustSectionPropTypes) => {
@@ -86,12 +124,31 @@ const TrustSection = ({traitCards, colorScheme}: TrustSectionPropTypes) => {
     )
 }
 
+const StatSection = ({colorScheme, heading, accentText, statCards}: StatSectionPropTypes) => {
+    return (<div className={`${styles.statContainer} ${colorScheme}`}>
+        <HeadingLayout colorScheme={colorScheme} heading={heading} accentText={accentText} textAlignment={"center"}/>
+
+        <div className={`${styles.statContainer} ${colorScheme}`}>
+            <div className={styles.flexBox2}>
+                {statCards.map((statCard, i) => {
+                    return (<StatCardLayout key={i} bigText={statCard.bigText} accentText={statCard.accentText}
+                                            description={statCard.description} colorScheme={colorScheme}
+                                            styling={statCard.styling}/>)
+                })}
+            </div>
+        </div>
+    </div>);
+}
 
 export default function Home() {
     return (
         <div>
             <HeroSectionLayout/>
+
             <TrustSection colorScheme={trustSectionProps.colorScheme} traitCards={trustSectionProps.traitCards}/>
+
+            <StatSection colorScheme={statSectionProps.colorScheme} heading={statSectionProps.heading}
+                         accentText={statSectionProps.accentText} statCards={statSectionProps.statCards}/>
         </div>
     );
 }
