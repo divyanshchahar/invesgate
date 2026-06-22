@@ -149,3 +149,68 @@
 
     }
 }
+
+.comparisonCardContainer {
+    background-color: var(--color-foreground);
+    color: var(--color-text-primary);
+    padding: var(--dimension-3);
+
+    border-radius: var(--radius-1);
+}
+
+.comparisonHeading {
+    font-size: var(--font-size-h6);
+    font-family: var(--font-family-cursive), serif;
+}
+
+.comparisonSecondryText {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--dimension-2);
+}
+
+.comparisonAccentText {
+    color: var(--color-accent);
+    margin-bottom: var(--dimension-2);
+}
+
+.comparisonPoints {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dimension-2);
+
+    margin-top: var(--dimension-3);
+
+
+    hr {
+        border: 1px solid var(--color-border);
+    }
+
+    hr:last-child {
+        display: none;
+    }
+}
+
+.comparisonDrawback::before {
+    content: "\2014";
+}
+
+.comparisonBenefits::before {
+    color: var(--color-accent);
+    content: "\2713"
+}
+
+.innerFlexBoxCentered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--dimension-5);
+}
+
+@media screen and (min-width: 480px) {
+    .innerFlexBoxCentered {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--dimension-10);
+    }
+}

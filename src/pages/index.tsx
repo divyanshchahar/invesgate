@@ -54,6 +54,14 @@ interface FinancialServicesSectionPropTypes {
     serviceBriefCards: ServiceBriefLayoutPropTypes[],
 }
 
+interface ComparisonCardLayoutPropTypes {
+    // colorScheme: string,
+    headingText: string,
+    accentText: string,
+    points: string[],
+    version: "benefits" | "drawbacks"
+}
+
 // ###############
 // # COLORSCHEME #
 // ###############
@@ -62,6 +70,8 @@ const trustColorScheme = "colorScheme1"
 const statSectionColorScheme = trustColorScheme
 const philisphySectionColorScheme = "colorScheme3"
 const financialServicesSectionColorScheme = "colorScheme1"
+const comparisonCardDrawbacks = "colorScheme1"
+const comparisonCardBenefits = "colorScheme3"
 
 
 // #########
@@ -223,6 +233,50 @@ const financialServicesSectionProps: FinancialServicesSectionPropTypes = {
         },]
 }
 
+const comparisonCardPropsDrawbackProps: ComparisonCardLayoutPropTypes = {
+    colorScheme: comparisonCardDrawbacks,
+    headingText: "The Conventional Model",
+    accentText: "Product-led selling",
+    points: ["Commission-driven recommendations", "Opaque fee structures and jargon", "One-size-fits-all portfolios", "Short-term, performance-chasing advice"],
+    version: "drawbacks"
+}
+
+const comparisonCardPropsBenefitsProps: ComparisonCardLayoutPropTypes = {
+    // colorScheme: comparisonCardDrawbacks,
+    headingText: "The Conventional Model",
+    accentText: "Product-led selling",
+    points: ["Transparent approach in plain language", "Independent advice, free of product quotas", "Plain & simple investing principles", "24 years of experience across cycles"],
+    version: "benefits"
+}
+
+
+// #################
+// # LOCAL LAYOUTS #
+// #################
+
+const ComparisonCard = ({accentText, headingText, points, version}: ComparisonCardLayoutPropTypes) => {
+    return (
+        <div
+            className={`${styles.comparisonCardContainer} ${version === "drawbacks" ? comparisonCardDrawbacks : comparisonCardBenefits}`}>
+            <p className={version === "drawbacks" ? styles.comparisonSecondryText : styles.comparisonAccentText}>{accentText}</p>
+
+            <p className={`${styles.comparisonHeading}`}>{headingText}</p>
+
+            <div className={styles.comparisonPoints}>
+                {points.map((point, i) => {
+                    return (
+                        <>
+                            <p key={i}
+                               className={`${version === "drawbacks" ? styles.comparisonDrawback : styles.comparisonBenefits}`}> {`${point}`}</p>
+                            <hr/>
+                        </>
+                    )
+                })}
+            </div>
+        </div>
+    )
+}
+
 // ############
 // # SECTIONS #
 // ############
@@ -317,6 +371,33 @@ const FinancialServicesSection = ({
     )
 }
 
+
+const CompariosonSection = () => {
+    return (
+        <div className={`colorScheme2 ${styles.paddedSection}`}>
+
+            <div className={`${styles.outerFlexBox} ${styles.maxWidthContainer}`}>
+
+                <HeadingLayout colorScheme={"colorScheme1"}
+                               heading={<p>Advice you can trace back to your interest — and only yours.</p>}
+                               accentText={"WHY CLIENTS CHOOSE INVESGATE"} textAlignment={"center"}/>
+
+                <div className={`${styles.innerFlexBoxCentered}`}>
+                    <ComparisonCard
+                        headingText={comparisonCardPropsDrawbackProps.headingText}
+                        accentText={comparisonCardPropsDrawbackProps.accentText}
+                        points={comparisonCardPropsDrawbackProps.points} version={"drawbacks"}/>
+
+                    <ComparisonCard
+                        headingText={comparisonCardPropsBenefitsProps.headingText}
+                        accentText={comparisonCardPropsBenefitsProps.accentText}
+                        points={comparisonCardPropsBenefitsProps.points} version={"benefits"}/>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 export default function Home() {
     return (
         <div>
@@ -337,6 +418,10 @@ export default function Home() {
                                       accentText={financialServicesSectionProps.accentText}
                                       linkText={financialServicesSectionProps.linkText}
                                       serviceBriefCards={financialServicesSectionProps.serviceBriefCards}/>
+
+            <CompariosonSection/>
+
+
         </div>
     );
 }
