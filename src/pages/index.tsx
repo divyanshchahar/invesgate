@@ -9,6 +9,18 @@ import StatCardLayout, {StatCardLayoutPropTypes} from "@/ui/layouts/StatCardLayo
 import HeadingLayout from "@/ui/layouts/HeadingLayout";
 import PhilosphyCardLayout, {PhilosphyCardLayoutProptypes} from "@/ui/layouts/PhilosphyCardLayout";
 import {ReactElement} from "react";
+import ServiceBriefLayout, {ServiceBriefLayoutPropTypes} from "@/ui/layouts/ServiceBriefLayout";
+import Link from "next/link";
+import AlternativeInvestmentFundsIconComponent from "../../public/icons/AlternativeInvestmentFundIconComponent";
+import TrendIconComponent from "../../public/icons/TrendIconComponent";
+import LoanIconComponent from "../../public/icons/LoanIconComponent";
+import InsuranceIconComponent from "../../public/icons/InsuranceIconComponent";
+import FinancialPlanningIconComponent from "../../public/icons/FinancialPlanningIconComponent";
+import EstatePlanningIconComponent from "../../public/icons/EstatePlanningIconComponent";
+import RealEstateIconComponent from "../../public/icons/RealEstateIconComponent";
+import PortfolioIconComponentProps from "../../public/icons/PortfolioIconComponent";
+import MutualFundsIconComponent from "../../public/icons/MutualFundsIconComponent";
+import CTAButton from "@/ui/components/CTAButton";
 
 
 // #########
@@ -34,6 +46,14 @@ interface PhilosphySectionPropTypes {
     colorScheme: string,
 }
 
+interface FinancialServicesSectionPropTypes {
+    colorScheme: string,
+    headingText: ReactElement,
+    accentText: string,
+    linkText: string,
+    serviceBriefCards: ServiceBriefLayoutPropTypes[],
+}
+
 // ###############
 // # COLORSCHEME #
 // ###############
@@ -41,6 +61,7 @@ interface PhilosphySectionPropTypes {
 const trustColorScheme = "colorScheme1"
 const statSectionColorScheme = trustColorScheme
 const philisphySectionColorScheme = "colorScheme3"
+const financialServicesSectionColorScheme = "colorScheme1"
 
 
 // #########
@@ -140,6 +161,68 @@ const philosphySectionProps: PhilosphySectionPropTypes = {
     }]
 }
 
+const financialServicesSectionProps: FinancialServicesSectionPropTypes = {
+    colorScheme: financialServicesSectionColorScheme,
+    headingText: <p>A complete suite of wealth disciplines.</p>,
+    accentText: "WHAT WE DO",
+    linkText: "View All Services",
+    serviceBriefCards: [
+        {
+            icon: <AlternativeInvestmentFundsIconComponent/>,
+            number: "1",
+            service: "Alternative Investment Funds",
+            colorScheme: financialServicesSectionColorScheme
+        },
+        {
+            icon: <TrendIconComponent/>,
+            number: "2",
+            service: "Equity Investment",
+            colorScheme: financialServicesSectionColorScheme
+        },
+        {
+            icon: <LoanIconComponent/>,
+            number: "3",
+            service: "Loans & Credit Solutions",
+            colorScheme: financialServicesSectionColorScheme
+        },
+        {
+            icon: <InsuranceIconComponent/>,
+            number: "4",
+            service: "Insurance",
+            colorScheme: financialServicesSectionColorScheme
+        },
+        {
+            icon: <FinancialPlanningIconComponent/>,
+            number: "5",
+            service: "Financial Planning",
+            colorScheme: financialServicesSectionColorScheme
+        },
+        {
+            icon: <EstatePlanningIconComponent/>,
+            number: "6",
+            service: "Estate Planning",
+            colorScheme: financialServicesSectionColorScheme
+        },
+        {
+            icon: <RealEstateIconComponent/>,
+            number: "7",
+            service: "Real Estate",
+            colorScheme: financialServicesSectionColorScheme
+        },
+        {
+            icon: <PortfolioIconComponentProps/>,
+            number: "8",
+            service: "Portfolio Management",
+            colorScheme: financialServicesSectionColorScheme
+        },
+        {
+            icon: <MutualFundsIconComponent/>,
+            number: "9",
+            service: "Mutual Funds",
+            colorScheme: financialServicesSectionColorScheme
+        },]
+}
+
 // ############
 // # SECTIONS #
 // ############
@@ -205,6 +288,35 @@ const PhilosphySection = ({accentText, headingText, colorScheme, philosphyCards}
     </div>
 }
 
+const FinancialServicesSection = ({
+                                      colorScheme,
+                                      linkText,
+                                      headingText,
+                                      accentText,
+                                      serviceBriefCards
+                                  }: FinancialServicesSectionPropTypes) => {
+    return (
+        <div className={`${colorScheme} ${styles.paddedSection}`}>
+            <div className={`${styles.maxWidthContainer} ${styles.outerFlexBox}`}>
+                <HeadingLayout colorScheme={colorScheme} heading={headingText} accentText={accentText}
+                               textAlignment={"left"}/>
+
+                <Link href={linkText} className={"straightLink"}>{linkText}</Link>
+
+                <div className={`${styles.innerFlexBox2}`}>
+                    {serviceBriefCards.map((briefCard, i) => {
+                        return <ServiceBriefLayout key={i} colorScheme={briefCard.colorScheme} icon={briefCard.icon}
+                                                   number={briefCard.number} service={briefCard.service}/>
+                    })
+                    }
+                </div>
+
+                <CTAButton ctaText={"Discuss your Financial Goals"} styling={styles.smallCtaButton}/>
+            </div>
+        </div>
+    )
+}
+
 export default function Home() {
     return (
         <div>
@@ -219,6 +331,12 @@ export default function Home() {
                               headingText={philosphySectionProps.headingText}
                               philosphyCards={philosphySectionProps.philosphyCards}
                               colorScheme={philosphySectionProps.colorScheme}/>
+
+            <FinancialServicesSection colorScheme={financialServicesSectionProps.colorScheme}
+                                      headingText={financialServicesSectionProps.headingText}
+                                      accentText={financialServicesSectionProps.accentText}
+                                      linkText={financialServicesSectionProps.linkText}
+                                      serviceBriefCards={financialServicesSectionProps.serviceBriefCards}/>
         </div>
     );
 }
