@@ -1,4 +1,3 @@
-import HeroSectionLayout from "@/ui/layouts/HeroSectionLayout";
 import TraitCardLayout, {TraitCardLayoutPropTypes} from "@/ui/layouts/TraitCardLayout";
 import Shield1IconComponent from "../../public/icons/Shield1IConComponent";
 import CompassIconComponent from "../../public/icons/CompassIconComponent";
@@ -21,6 +20,9 @@ import RealEstateIconComponent from "../../public/icons/RealEstateIconComponent"
 import PortfolioIconComponentProps from "../../public/icons/PortfolioIconComponent";
 import MutualFundsIconComponent from "../../public/icons/MutualFundsIconComponent";
 import CTAButton from "@/ui/components/CTAButton";
+import meetingImage from "../../public/images/old_meeting.png"
+import HeroSectionLayout from "@/ui/layouts/HeroSectionLayout";
+import Image from "next/image";
 
 
 // #########
@@ -398,6 +400,28 @@ const CompariosonSection = () => {
     )
 }
 
+const MeetingSection = () => {
+    return (
+        <div className={`colorScheme2 ${styles.paddedSection}`}>
+            <div className={`${styles.meetingContainer} ${styles.maxWidthContainer}`}>
+                <div className={`${styles.meetingDetailsContainer}`}>
+                    <HeadingLayout colorScheme={"colorScheme1"}
+                                   heading={<p>A simple conversation, whenever you’re ready.</p>}
+                                   accentText={"PRIVATE CONSULTATION"} textAlignment={"left"}/>
+
+                    <p>Sit down with an independent advisor for an unhurried reading of where your wealth stands
+                        today — and where disciplined planning could take it. No cost, no obligation.</p>
+
+                    <CTAButton ctaText={"Talk to Us"} styling={styles.smallCtaButton}/>
+                </div>
+
+                <Image src={meetingImage} alt={"meeting image"} width={100} height={100}
+                       className={styles.image}/>
+            </div>
+        </div>
+    )
+}
+
 export default function Home() {
     return (
         <div>
@@ -421,7 +445,8 @@ export default function Home() {
 
             <CompariosonSection/>
 
+            <MeetingSection/>
 
         </div>
-    );
+    )
 }
