@@ -89,7 +89,7 @@ const trustSectionProps = {
         bodyText: "Association of Mutual Funds",
         serialNo: "",
         colorScheme: trustColorScheme,
-        styling: styles.fullwidth
+        styling: styles.fullWidth
     },
         {
             icon: <CompassIconComponent/>,
@@ -98,7 +98,7 @@ const trustSectionProps = {
             bodyText: "No Product quotas, no conflicts",
             serialNo: "",
             colorScheme: trustColorScheme,
-            styling: styles.fullwidth
+            styling: styles.fullWidth
         },
         {
             icon: <ClockIconComponent/>,
@@ -107,7 +107,7 @@ const trustSectionProps = {
             bodyText: "Across Market Cycles",
             serialNo: "",
             colorScheme: trustColorScheme,
-            styling: styles.fullwidth
+            styling: styles.fullWidth
         },
         {
             icon: <VerifiedIconComponent/>,
@@ -116,7 +116,7 @@ const trustSectionProps = {
             bodyText: "Plain language, full clarity",
             serialNo: "",
             colorScheme: trustColorScheme,
-            styling: styles.fullwidth
+            styling: styles.fullWidth
         },
     ],
 }
@@ -184,55 +184,64 @@ const financialServicesSectionProps: FinancialServicesSectionPropTypes = {
             icon: <AlternativeInvestmentFundsIconComponent/>,
             number: "1",
             service: "Alternative Investment Funds",
-            colorScheme: financialServicesSectionColorScheme
+            colorScheme: financialServicesSectionColorScheme,
+            styling: styles.fullWidth,
         },
         {
             icon: <TrendIconComponent/>,
             number: "2",
             service: "Equity Investment",
-            colorScheme: financialServicesSectionColorScheme
+            colorScheme: financialServicesSectionColorScheme,
+            styling: styles.fullWidth,
         },
         {
             icon: <LoanIconComponent/>,
             number: "3",
             service: "Loans & Credit Solutions",
-            colorScheme: financialServicesSectionColorScheme
+            colorScheme: financialServicesSectionColorScheme,
+            styling: styles.fullWidth,
         },
         {
             icon: <InsuranceIconComponent/>,
             number: "4",
             service: "Insurance",
-            colorScheme: financialServicesSectionColorScheme
+            colorScheme: financialServicesSectionColorScheme,
+            styling: styles.fullWidth,
         },
         {
             icon: <FinancialPlanningIconComponent/>,
             number: "5",
             service: "Financial Planning",
-            colorScheme: financialServicesSectionColorScheme
+            colorScheme: financialServicesSectionColorScheme,
+            styling: styles.fullWidth,
         },
         {
             icon: <EstatePlanningIconComponent/>,
             number: "6",
             service: "Estate Planning",
-            colorScheme: financialServicesSectionColorScheme
+            colorScheme: financialServicesSectionColorScheme,
+            styling: styles.fullWidth,
         },
         {
             icon: <RealEstateIconComponent/>,
             number: "7",
             service: "Real Estate",
-            colorScheme: financialServicesSectionColorScheme
+            colorScheme: financialServicesSectionColorScheme,
+            styling: styles.fullWidth,
         },
         {
             icon: <PortfolioIconComponentProps/>,
             number: "8",
             service: "Portfolio Management",
-            colorScheme: financialServicesSectionColorScheme
+            colorScheme: financialServicesSectionColorScheme,
+            styling: styles.fullWidth,
         },
         {
             icon: <MutualFundsIconComponent/>,
             number: "9",
             service: "Mutual Funds",
-            colorScheme: financialServicesSectionColorScheme
+            colorScheme: financialServicesSectionColorScheme,
+            styling: styles.fullWidth,
         },]
 }
 
@@ -246,7 +255,7 @@ const comparisonCardPropsDrawbackProps: ComparisonCardLayoutPropTypes = {
 
 const comparisonCardPropsBenefitsProps: ComparisonCardLayoutPropTypes = {
     // colorScheme: comparisonCardDrawbacks,
-    headingText: "The Conventional Model",
+    headingText: "Independent counsel",
     accentText: "Product-led selling",
     points: ["Transparent approach in plain language", "Independent advice, free of product quotas", "Plain & simple investing principles", "24 years of experience across cycles"],
     version: "benefits"
@@ -261,9 +270,9 @@ const ComparisonCard = ({accentText, headingText, points, version}: ComparisonCa
     return (
         <div
             className={`${styles.comparisonCardContainer} ${version === "drawbacks" ? comparisonCardDrawbacks : comparisonCardBenefits}`}>
-            <p className={version === "drawbacks" ? styles.comparisonSecondryText : styles.comparisonAccentText}>{accentText}</p>
+            <p className={version === "drawbacks" ? styles.comparisonSecondaryText : styles.comparisonAccentText}>{accentText}</p>
 
-            <p className={`${styles.comparisonHeading}`}>{headingText}</p>
+            <p className={`heading6Cursive`}>{headingText}</p>
 
             <div className={styles.comparisonPoints}>
                 {points.map((point, i) => {
@@ -286,8 +295,8 @@ const ComparisonCard = ({accentText, headingText, points, version}: ComparisonCa
 
 const TrustSection = ({traitCards, colorScheme}: TrustSectionPropTypes) => {
     return (
-        <div className={`${colorScheme} ${styles.trustContainer}`}>
-            <div className={styles.flexBox}>
+        <div className={`${colorScheme} ${styles.trustPaddedContainer}`}>
+            <div className={styles.noGapFlex1}>
                 {
                     traitCards.map((traitCard, i) => {
                             return (
@@ -310,39 +319,48 @@ const TrustSection = ({traitCards, colorScheme}: TrustSectionPropTypes) => {
 }
 
 const StatSection = ({colorScheme, heading, accentText, statCards}: StatSectionPropTypes) => {
-    return (<div className={`${styles.statContainer} ${colorScheme}`}>
-        <HeadingLayout colorScheme={colorScheme} heading={heading} accentText={accentText} textAlignment={"center"}/>
+    return (
+        <div className={`${styles.statsPaddedContainer} ${colorScheme}`}>
+            <HeadingLayout colorScheme={colorScheme} heading={heading} accentText={accentText}
+                           textAlignment={"center"}/>
 
-        <div className={`${styles.statContainer} ${colorScheme}`}>
-            <div className={styles.flexBox2}>
-                {statCards.map((statCard, i) => {
-                    return (<StatCardLayout key={i} bigText={statCard.bigText} accentText={statCard.accentText}
-                                            description={statCard.description} colorScheme={colorScheme}
-                                            styling={statCard.styling}/>)
-                })}
+            <div className={`${styles.statsPaddedContainer} ${colorScheme}`}>
+                <div className={styles.noGapFlex2}>
+                    {statCards.map((statCard, i) => {
+                        return (
+                            <>
+                                <StatCardLayout key={i} bigText={statCard.bigText} accentText={statCard.accentText}
+                                                description={statCard.description} colorScheme={colorScheme}
+                                                styling={statCard.styling}/>
+                            </>
+                        )
+                    })}
+                </div>
             </div>
         </div>
-    </div>);
+    );
 }
 
 const PhilosphySection = ({accentText, headingText, colorScheme, philosphyCards}: PhilosphySectionPropTypes) => {
-    return <div className={`${colorScheme} ${styles.paddedSection}`}>
+    return (
+        <div className={`${colorScheme} paddedContainer`}>
 
-        <div className={`${styles.maxWidthContainer}`}>
+            <div className={`maxWidthContainer outerFlexContainer`}>
 
-            <HeadingLayout colorScheme={colorScheme} heading={headingText} accentText={accentText}
-                           textAlignment={"left"}/>
+                <HeadingLayout colorScheme={colorScheme} heading={headingText} accentText={accentText}
+                               textAlignment={"left"}/>
 
-            <div className={`${styles.flexBox0}`}>
-                {philosphyCards.map((philosphyCard, i) => {
-                    return (
-                        <PhilosphyCardLayout key={i} serial={philosphyCard.serial}
-                                             colorScheme={philosphyCard.colorScheme}
-                                             description={philosphyCard.description} trait={philosphyCard.trait}/>)
-                })}
+                <div className={`innerFlexContainer ${styles.centeredFlexContent}`}>
+                    {philosphyCards.map((philosphyCard, i) => {
+                        return (
+                            <PhilosphyCardLayout key={i} serial={philosphyCard.serial}
+                                                 colorScheme={philosphyCard.colorScheme}
+                                                 description={philosphyCard.description} trait={philosphyCard.trait}/>)
+                    })}
+                </div>
             </div>
         </div>
-    </div>
+    )
 }
 
 const FinancialServicesSection = ({
@@ -353,22 +371,24 @@ const FinancialServicesSection = ({
                                       serviceBriefCards
                                   }: FinancialServicesSectionPropTypes) => {
     return (
-        <div className={`${colorScheme} ${styles.paddedSection}`}>
-            <div className={`${styles.maxWidthContainer} ${styles.outerFlexBox}`}>
+        <div className={`${colorScheme} paddedContainer`}>
+            <div className={`maxWidthContainer outerFlexContainer`}>
                 <HeadingLayout colorScheme={colorScheme} heading={headingText} accentText={accentText}
                                textAlignment={"left"}/>
 
                 <Link href={linkText} className={"straightLink"}>{linkText}</Link>
 
-                <div className={`${styles.innerFlexBox2}`}>
+                <div className={`${styles.noGapFlex3}`}>
                     {serviceBriefCards.map((briefCard, i) => {
                         return <ServiceBriefLayout key={i} colorScheme={briefCard.colorScheme} icon={briefCard.icon}
-                                                   number={briefCard.number} service={briefCard.service}/>
+                                                   number={briefCard.number} service={briefCard.service}
+                                                   styling={briefCard.styling}/>
                     })
                     }
                 </div>
 
-                <CTAButton ctaText={"Discuss your Financial Goals"} styling={styles.smallCtaButton}/>
+                <CTAButton ctaText={"Discuss your Financial Goals"}
+                           styling={`${styles.smallCtaButton} ${styles.centered}`}/>
             </div>
         </div>
     )
@@ -377,15 +397,15 @@ const FinancialServicesSection = ({
 
 const CompariosonSection = () => {
     return (
-        <div className={`colorScheme2 ${styles.paddedSection}`}>
+        <div className={`colorScheme2 paddedContainer`}>
 
-            <div className={`${styles.outerFlexBox} ${styles.maxWidthContainer}`}>
+            <div className={`outerFlexContainer maxWidthContainer`}>
 
                 <HeadingLayout colorScheme={"colorScheme1"}
                                heading={<p>Advice you can trace back to your interest — and only yours.</p>}
                                accentText={"WHY CLIENTS CHOOSE INVESGATE"} textAlignment={"center"}/>
 
-                <div className={`${styles.innerFlexBoxCentered}`}>
+                <div className={`innerFlexContainer ${styles.centeredFlexContent}`}>
                     <ComparisonCard
                         headingText={comparisonCardPropsDrawbackProps.headingText}
                         accentText={comparisonCardPropsDrawbackProps.accentText}
@@ -403,8 +423,8 @@ const CompariosonSection = () => {
 
 const MeetingSection = () => {
     return (
-        <div className={`colorScheme2 ${styles.paddedSection}`}>
-            <div className={`${styles.meetingContainer} ${styles.maxWidthContainer}`}>
+        <div className={`colorScheme2 paddedContainer`}>
+            <div className={`${styles.meetingContainer} maxWidthContainer`}>
                 <div className={`${styles.meetingDetailsContainer}`}>
                     <HeadingLayout colorScheme={"colorScheme1"}
                                    heading={<p>A simple conversation, whenever you’re ready.</p>}
