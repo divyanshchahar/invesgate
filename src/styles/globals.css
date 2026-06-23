@@ -457,8 +457,8 @@ button {
     gap: var(--padding-section-s);
 }
 
-@media scarren and (min-width: 480px) {
-    .outerFlexContainer {
+@media screen and (min-width: 480px) {
+    .innerFlexContainer {
         flex-direction: row;
         flex-wrap: wrap;
     }
