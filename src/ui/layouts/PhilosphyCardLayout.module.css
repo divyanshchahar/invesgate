@@ -1,7 +1,7 @@
 .container {
     padding: var(--dimension-6);
 
-    max-width: var(--max-width-s);
+    max-width: var(--max-width-xxs);
     background-color: var(--color-foreground);
     color: var(--color-text-primary);
 

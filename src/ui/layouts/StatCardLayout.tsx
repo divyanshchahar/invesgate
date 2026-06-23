@@ -1,6 +1,6 @@
 import styles from "./StatCardLayout.module.css"
 
-export interface TraitCardLayoutPropTypes {
+export interface StatCardLayoutPropTypes {
     bigText: string,
     accentText: string,
     description: string,
@@ -14,7 +14,7 @@ export default function StatCardLayout({
                                            description,
                                            colorScheme,
                                            styling
-                                       }: TraitCardLayoutPropTypes) {
+                                       }: StatCardLayoutPropTypes) {
     return (
         <div className={`${styles.container} ${colorScheme} ${styling}`}>
             <p className={`${styles.mainText}`}>{`${bigText} `}<span

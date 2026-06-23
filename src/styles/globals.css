@@ -31,6 +31,10 @@
     --color-gold-2: rgba(169, 134, 63, 1);
     --color-gold-3: rgba(194, 162, 98, 1);
 
+    --color-red: rgba(255, 0, 0, 1);
+
+    --color-green: rgba(0, 255, 0, 1);
+
     --color-transparent-1: rgba(169, 134, 63, 0.34);
 
 
@@ -105,16 +109,16 @@
         }
     }
 
-    --padding-section-l: var(--dimension-5);
-    --padding-section-m: var(--dimension-4);
-    --padding-section-s: var(--dimension-2);
+    --padding-section-l: var(--dimension-10);
+    --padding-section-m: var(--dimension-8);
+    --padding-section-s: var(--dimension-6);
 
     @media screen and (min-width: 480px) {
         * {
             /*--padding-global: var(--dimension-6);*/
-            --padding-section-l: var(--dimension-10);
-            --padding-section-m: var(--dimension-8);
-            --padding-section-s: var(--dimension-4);
+            --padding-section-l: var(--dimension-20);
+            --padding-section-m: var(--dimension-16);
+            --padding-section-s: var(--dimension-8);
         }
     }
 
@@ -385,6 +389,8 @@
     --color-text-secondary: var(--color-black-3);
     --color-border: var(--color-transparent-1);
     --color-accent: var(--color-gold-2);
+    --color-danger: var(--color-red);
+    --color-sucess: var(--color-green);
 }
 
 .colorScheme2 {
@@ -394,6 +400,8 @@
     --color-text-secondary: var(--color-black-3);
     --color-border: var(--color-transparent-1);
     --color-accent: var(--color-gold-2);
+    --color-danger: var(--color-red);
+    --color-sucess: var(--color-green);
 }
 
 .colorScheme3 {
@@ -403,6 +411,8 @@
     --color-text-secondary: var(--color-grey-2);
     --color-border: var(--color-transparent-1);
     --color-accent: var(--color-gold-2);
+    --color-danger: var(--color-red);
+    --color-sucess: var(--color-green);
 }
 
 /*##################*/
@@ -417,4 +427,39 @@ a {
 
 button {
     all: unset;
+}
+
+/*##################*/
+/*# GLOBAL CLASSES #*/
+/*##################*/
+
+.maxWidthContainer {
+    max-width: var(--max-width-xxl);
+    margin: auto;
+}
+
+.paddedContainer {
+    padding: var(--padding-section-l) var(--padding-page);
+
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+}
+
+.outerFlexContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-section-m);
+}
+
+.innerFlexContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-section-s);
+}
+
+@media scarren and (min-width: 480px) {
+    .outerFlexContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
