@@ -25,7 +25,7 @@ export default function ServiceDetailCardLayout({
     return (
         <div className={`${styles.container} ${colorScheme} ${styling}`}>
 
-            <div>
+            <div className={styles.top}>
                 <div className={`${styles.header}`}>
                     {icon}
                     <p>{serialNo}</p>
