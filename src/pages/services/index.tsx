@@ -8,6 +8,8 @@ import RealEstateIconComponent from "../../../public/icons/RealEstateIconCompone
 import PortfolioIconComponentProps from "../../../public/icons/PortfolioIconComponent";
 import MutualFundsIconComponent from "../../../public/icons/MutualFundsIconComponent";
 import styles from "./index.module.css"
+import HeaderLayout from "@/ui/layouts/HeaderLayout";
+import CTALayout from "@/ui/layouts/CTALayout";
 
 const serviceSectionColorScheme = "colorScheme1";
 
@@ -96,22 +98,29 @@ const props: ServiceDetailCardLayoutPropsTypes[] = [{
 
 export default function AboutUsPage() {
     return (
-        <div className={`colorScheme1 ${styles.paddedContainer} paddedContainer`}>
-            {
-                props.map((prop, i) => {
-                        return (
-                            <>
-                                <ServiceDetailCardLayout key={i} service={prop.service} description={prop.description}
-                                                         benefits={prop.benefits} idealFor={prop.idealFor}
-                                                         colorScheme={prop.colorScheme} icon={prop.icon}
-                                                         serialNo={prop.serialNo}/>
 
-                                <hr/>
-                            </>
-                        )
-                    }
-                )
-            }
-        </div>
+        <>
+            <HeaderLayout colorScheme={"colorScheme3"} version={"services"}/>
+
+            <div className={`colorScheme1 ${styles.paddedContainer} paddedContainer`}>
+                {
+                    props.map((prop, i) => {
+                            return (
+                                <>
+                                    <ServiceDetailCardLayout key={i} service={prop.service} description={prop.description}
+                                                             benefits={prop.benefits} idealFor={prop.idealFor}
+                                                             colorScheme={prop.colorScheme} icon={prop.icon}
+                                                             serialNo={prop.serialNo}/>
+
+                                    <hr/>
+                                </>
+                            )
+                        }
+                    )
+                }
+            </div>
+
+            <CTALayout version={"services"}/>
+        </>
     )
 }
