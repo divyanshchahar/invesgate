@@ -9,6 +9,7 @@ export interface TraitCardLayoutPropTypes {
     smallText: string,
     bodyText: string,
     colorScheme: string,
+    styling?: string
 }
 
 export default function TraitCardLayout({
@@ -17,10 +18,11 @@ export default function TraitCardLayout({
                                             bigText,
                                             smallText,
                                             bodyText,
-                                            colorScheme
+                                            colorScheme,
+                                            styling,
                                         }: TraitCardLayoutPropTypes) {
     return (
-        <div className={`${styles.container} ${colorScheme}`}>
+        <div className={`${styles.container} ${colorScheme} ${styling}`}>
 
             <div className={`${styles.header}`}>
                 {icon} {serialNo}
