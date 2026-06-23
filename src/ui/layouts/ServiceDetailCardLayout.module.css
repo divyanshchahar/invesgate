@@ -61,8 +61,6 @@
 
     border-radius: var(--radius-1);
     border: 1px solid var(--color-border);
-
-
 }
 
 .idealFor {
@@ -75,6 +73,8 @@
 
 .bottom {
 
+    flex: 1 1 0px;
+
     ul {
         list-style-position: outside;
         list-style-type: "\2713";
@@ -84,4 +84,8 @@
     ul li::marker {
         color: var(--color-accent);
     }
+}
+
+.top {
+    flex: 1 1 0px;
 }
