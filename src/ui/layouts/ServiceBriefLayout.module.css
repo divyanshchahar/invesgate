@@ -4,12 +4,15 @@
     background-color: var(--color-foreground);
 
     max-width: var(--max-width-xxs);
+
+    border: 1px solid var(--color-border);
 }
 
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
     svg {
         height: var(--font-size-m);
         color: var(--color-accent);

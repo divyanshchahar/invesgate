@@ -1,0 +1,39 @@
+.accentText {
+    color: var(--color-accent);
+}
+
+.headingText {
+
+    p {
+        color: var(--color-text-primary);
+
+        font-family: var(--font-family-cursive), serif;
+        font-size: var(--font-size-h5);
+
+        span {
+            color: inherit;
+
+            font-style: italic;
+
+            font-family: inherit;
+            font-size: inherit;
+        }
+    }
+
+}
+
+@media screen and (min-width: 480px) {
+    .headingText {
+        p {
+            font-size: var(--font-size-h2);
+        }
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
