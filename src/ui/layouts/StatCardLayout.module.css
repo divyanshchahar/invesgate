@@ -3,6 +3,7 @@
     color: var(--color-text-primary);
     padding: var(--dimension-3);
     max-width: var(--max-width-s);
+    text-align: center;
 }
 
 .mainText {
