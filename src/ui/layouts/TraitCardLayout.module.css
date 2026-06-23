@@ -6,11 +6,13 @@
     --accent-color: var(--color-accent);
     --border-color: var(--color-border);
 
-    padding: var(--dimension-1);
+    padding: var(--dimension-3);
     color: var(--text-primary-color);
     background-color: var(--foreground-color);
 
-    /*font-family: var(--font-family-sans);*/
+    max-width: var(--max-width-xxs);
+
+    border: 1px solid var(--border-color);
 
     .header {
         display: flex;
