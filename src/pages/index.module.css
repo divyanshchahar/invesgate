@@ -1,11 +1,11 @@
-.trustContainer {
-    padding: var(--padding-section-l) var(--padding-page) var(--dimension-5) var(--padding-page);
+.trustPaddedContainer {
+    padding: var(--padding-section-l) var(--padding-page) calc(var(--padding-section-m) / 2) var(--padding-page);
 
     background-color: var(--color-background);
 }
 
 
-.flexBox {
+.noGapFlex1 {
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -15,19 +15,16 @@
 }
 
 @media screen and (min-width: 480px) {
-    .flexBox {
+    .noGapFlex1 {
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
     }
 }
 
-.fullwidth {
-    width: 100%;
-}
-
 .statCard {
     border-bottom: 1px solid var(--color-border);
+    /*width:100%*/
 }
 
 
@@ -35,7 +32,7 @@
     border-bottom: none;
 }
 
-@media screen and (min-width: 872px) {
+@media screen and (min-width: 968px) {
     .statCard {
         border-bottom: none;
         border-right: 1px solid var(--color-border);
@@ -47,12 +44,12 @@
 }
 
 
-.statContainer {
+.statsPaddedContainer {
     background-color: var(--color-background);
-    padding: var(--dimension-5) var(--padding-page) var(--padding-section-l) var(--padding-page);
+    padding: calc(var(--padding-section-m) / 2) var(--padding-page) var(--padding-section-l) var(--padding-page);
 }
 
-.flexBox2 {
+.noGapFlex2 {
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -61,92 +58,30 @@
     max-width: var(--max-width-xxl);
 }
 
-@media screen and (min-width: 872px) {
-    .flexBox2 {
+@media screen and (min-width: 968px) {
+    .noGapFlex2 {
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
     }
 }
 
-.flexContainer {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    max-width: var(--max-width-xxl);
-    gap: var(--dimension-5);
-}
-
-@media screen and (min-width: 480px) {
-    .flexContainer {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: var(--dimension-10);
-    }
-}
-
-.paddedSection {
-    background-color: var(--color-background);
-
-    padding: var(--padding-section-l) var(--padding-page);
-}
-
-.flexBox0 {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    gap: var(--dimension-5);
-    margin-top: var(--dimension-5);
-}
-
-@media screen and (min-width: 480px) {
-    .flexBox0 {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: var(--dimension-10);
-    }
-}
-
-.maxWidthContainer {
-    max-width: var(--max-width-xxl);
-    margin: auto;
-}
-
-.outerFlexBox {
-    display: flex;
-    flex-direction: column;
-    gap: var(--dimension-5);
-}
-
-@media screen and (min-width: 480px) {
-    .outerFlexBox {
-        gap: var(--dimension-10);
-    }
-}
 
 .smallCtaButton {
     width: fit-content;
-    margin: auto;
 }
 
-.innerFlexBox2 {
+.noGapFlex3 {
     display: flex;
     flex-direction: column;
     margin: auto;
-    /*align-items: center;*/
     justify-content: center;
 }
 
 @media screen and (min-width: 480px) {
-    .innerFlexBox2 {
+    .noGapFlex3 {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: flex-start;
-
     }
 }
 
@@ -158,12 +93,7 @@
     border-radius: var(--radius-1);
 }
 
-.comparisonHeading {
-    font-size: var(--font-size-h6);
-    font-family: var(--font-family-cursive), serif;
-}
-
-.comparisonSecondryText {
+.comparisonSecondaryText {
     color: var(--color-text-secondary);
     margin-bottom: var(--dimension-2);
 }
@@ -199,22 +129,6 @@
     content: "\2713"
 }
 
-.innerFlexBoxCentered {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: var(--dimension-5);
-}
-
-@media screen and (min-width: 480px) {
-    .innerFlexBoxCentered {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: var(--dimension-10);
-    }
-}
-
 .image {
     width: 100%;
     height: 100%;
@@ -230,7 +144,7 @@
     overflow: hidden;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 1156px) {
     .meetingContainer {
         flex-direction: row;
     }
@@ -252,3 +166,16 @@
     }
 }
 
+
+.centeredFlexContent {
+    align-items: center;
+    justify-content: center;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.centered {
+    margin: auto;
+}
