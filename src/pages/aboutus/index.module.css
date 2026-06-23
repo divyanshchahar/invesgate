@@ -1,0 +1,11 @@
+.paddedContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dimension-4);
+
+    background-color: var(--color-background);
+
+    hr {
+        border: 1px solid var(--color-border);
+    }
+}
