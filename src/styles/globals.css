@@ -428,3 +428,38 @@ a {
 button {
     all: unset;
 }
+
+/*##################*/
+/*# GLOBAL CLASSES #*/
+/*##################*/
+
+.maxWidthContainer {
+    max-width: var(--max-width-xxl);
+    margin: auto;
+}
+
+.paddedContainer {
+    padding: var(--padding-section-l) var(--padding-page);
+
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+}
+
+.outerFlexContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-section-m);
+}
+
+.innerFlexContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-section-s);
+}
+
+@media scarren and (min-width: 480px) {
+    .outerFlexContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
