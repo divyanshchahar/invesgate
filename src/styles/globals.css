@@ -405,8 +405,8 @@
 }
 
 .colorScheme3 {
-    --color-background: var(--color-blue-1);
-    --color-foreground: var(--color-blue-2);
+    --color-background: var(--color-blue-2);
+    --color-foreground: var(--color-blue-1);
     --color-text-primary: var(--color-grey-1);
     --color-text-secondary: var(--color-grey-2);
     --color-border: var(--color-transparent-1);

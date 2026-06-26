@@ -4,11 +4,10 @@ import styles from "./CTALayout.module.css"
 const AboutUSCTA = () => {
     return (
         <div className={styles.maxWidth}>
-            <p className={styles.accent}>FIND YOUR STRATEGY</p>
-            <p className={styles.heading}>Discuss the right strategy for <span>your goals.</span></p>
-            <p className={styles.text}>Every plan begins with understanding. Tell us where you stand, and we'll help you
-                see
-                where you could go.</p>
+            <p className={styles.accent}>BEGIN THE CONVERSATION</p>
+            <p className={styles.heading}>Ready to discuss your <span>financial future?</span></p>
+            <p className={styles.text}>Let's start with a conversation — no cost, no obligation, only a clear and
+                independent perspective.</p>
         </div>
     )
 }
@@ -18,9 +17,9 @@ const ServiceCTA = () => {
     return (
         <div className={styles.maxWidth}>
             <p className={styles.accent}>FIND YOUR STRATEGY</p>
-            <p className={styles.heading}>Ready to discuss your <span>financial future?</span></p>
-            <p className={styles.text}>Let's start with a conversation — no cost, no obligation, only a clear and
-                independent perspective.</p>
+            <p className={styles.heading}>Discuss the right strategy for <span>your goals.</span></p>
+            <p className={styles.text}>Every plan begins with understanding. Tell us where you stand, and we'll help you
+                see where you could go.</p>
         </div>
     )
 }

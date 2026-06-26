@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    gap: var(--dimension-2);
+    gap: var(--padding-section-s);
 
     background-color: var(--color-background);
     color: var(--color-text-primary);
@@ -11,7 +11,7 @@
 @media screen and (min-width: 480px) {
     .container {
         flex-direction: row;
-        gap: var(--dimension-5);
+        /*gap: var(--dimension-5);*/
     }
 }
 

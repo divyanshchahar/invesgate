@@ -1,117 +1,290 @@
-import TrendIconComponent from "../../../public/icons/TrendIconComponent";
-import ServiceDetailCardLayout, {ServiceDetailCardLayoutPropsTypes} from "@/ui/layouts/ServiceDetailCardLayout";
-import AlternativeInvestmentFundsIconComponent from "../../../public/icons/AlternativeInvestmentFundIconComponent";
-import LoanIconComponent from "../../../public/icons/LoanIconComponent";
-import FinancialPlanningIconComponent from "../../../public/icons/FinancialPlanningIconComponent";
-import EstatePlanningIconComponent from "../../../public/icons/EstatePlanningIconComponent";
-import RealEstateIconComponent from "../../../public/icons/RealEstateIconComponent";
-import PortfolioIconComponentProps from "../../../public/icons/PortfolioIconComponent";
-import MutualFundsIconComponent from "../../../public/icons/MutualFundsIconComponent";
+import Image from "next/image";
+import foundersPhoto from "../../../public/images/founder.jpeg"
 import styles from "./index.module.css"
+import HeadingLayout, {HeadingLayoutPropTypes} from "@/ui/layouts/HeadingLayout";
+import HeaderLayout from "@/ui/layouts/HeaderLayout";
+import invesgateTeam from "../../../public/images/old_team.png"
+import StatsSectionLayout, {StatsSectionLayoutPropTypes} from "@/ui/layouts/StatsSectionLayout";
+import TraitCardLayout, {TraitCardLayoutPropTypes} from "@/ui/layouts/TraitCardLayout";
+import VerifiedIconComponent from "../../../public/icons/VerifiedIconComponent";
+import CompassIconComponent from "../../../public/icons/CompassIconComponent";
+import ClockIconComponent from "../../../public/icons/ClockIconComponent";
+import CTALayout from "@/ui/layouts/CTALayout";
+import CheckIconComponent from "../../../public/icons/CheckIconComponent"
+import TextCardLayout, {TextCardLayoutPropTypes} from "@/ui/layouts/TextCardLayout";
 
-const serviceSectionColorScheme = "colorScheme1";
 
-const props: ServiceDetailCardLayoutPropsTypes[] = [{
-    service: "Alternative Investment Funds",
-    description: "Access to professionally managed private market strategies that sit beyond conventional public markets — structured for sophisticated investors seeking differentiated returns.",
-    benefits: ["Diversification beyond listed equities and bonds", "Access to private equity, credit, and structured strategies", "Professional management with institutional discipline"],
-    idealFor: "Established investors with surplus capital seeking to diversify a mature portfolio and willing to commit for the long term.",
-    colorScheme: serviceSectionColorScheme,
-    icon: <AlternativeInvestmentFundsIconComponent/>,
-    serialNo: "01"
-},
-    {
-        service: "Equity Investment",
-        description: "Research-led equity portfolios built on conviction, not consensus — owning quality businesses and holding them with the patience that compounding rewards.",
-        benefits: ["Conviction-led selection of quality businesses", "A long-term, cycle-aware approach to ownership", "Transparent rationale behind every position\n"],
-        idealFor: "Investors with a multi-year horizon who want disciplined equity exposure without the noise of short-term trading.",
-        colorScheme: serviceSectionColorScheme,
-        icon: <TrendIconComponent/>,
-        serialNo: "02"
-    },
-    {
-        service: "Loans & Credit Solutions",
-        description: "Structured borrowing against your assets — unlocking liquidity without disturbing a well-built portfolio or forcing untimely sales",
-        benefits: ["Liquidity without liquidating long-term holdings", "Transparent rationale behind every position", "Structures matched to your cash-flow and goals"],
-        idealFor: "Asset-rich investors needing flexible liquidity for opportunities or obligations, while keeping investments intact..",
-        colorScheme: serviceSectionColorScheme,
-        icon: <LoanIconComponent/>,
-        serialNo: "03"
-    },
-    {
-        service: "Insurance",
-        description: "Protection that anchors the wider plan — ensuring that a single event never undoes years of careful-wealth building.",
-        benefits: ["Life, health, and asset protection reviewed holistically", "Cover sized to your liabilities and dependents", "Recommendations free of product-push incentives"],
-        idealFor: "Families and earners who want their protection to be deliberate and right-sized — never over-sold.",
-        colorScheme: serviceSectionColorScheme,
-        icon: <LoanIconComponent/>,
-        serialNo: "04"
-    },
-    {
-        service: "Financial Planning",
-        description: "A clear roadmap built around your life goals — coordinating income, investments, protection, and milestones into one coherent plan.",
-        benefits: ["Goal-based planning across life stages", "Cash-flow, tax-awareness, and contingency built in", "A living plan, reviewed as your life evolves"],
-        idealFor: "Anyone seeking structure and clarity — from first serious savings to managing substantial, complex wealth.",
-        colorScheme: serviceSectionColorScheme,
-        icon: <FinancialPlanningIconComponent/>,
-        serialNo: "05"
-    },
-    {
-        service: "Estate Planning",
-        description: "Transfer wealth with intent and clarity — ensuring what you have built passes to the next generation on your terms, without friction.",
-        benefits: ["Succession structured to your wishes", "Coordination of wills, nominations, and trusts", "Continuity that protects family and legacy"],
-        idealFor: "Investors thinking beyond their own horizon, who want their legacy transferred smoothly and intentionally.",
-        colorScheme: serviceSectionColorScheme,
-        icon: <EstatePlanningIconComponent/>,
-        serialNo: "06"
-    },
-    {
-        service: "Real Estate",
-        description: "Property treated as a deliberate allocation within the wider portfolio — assessed on merit, not sentiment, and integrated into your plan.",
-        benefits: ["Real estate as a considered portfolio allocation", "Objective assessment of yield and liquidity", "Integration with your broader wealth strategy"],
-        idealFor: "Investors weighing property decisions who want them framed within a complete wealth picture.",
-        colorScheme: serviceSectionColorScheme,
-        icon: <RealEstateIconComponent/>,
-        serialNo: "07"
-    },
-    {
-        service: "Portfolio Management",
-        description: "Active stewardship of the whole picture — balancing every asset, every goal, and every market cycle with discipline and a steady hand.",
-        benefits: ["Holistic oversight across all asset classes", "Disciplined rebalancing through market cycles", "One coherent view of your entire wealth"],
-        idealFor: "Investors who want a single, trusted steward coordinating the full breadth of their wealth..",
-        colorScheme: serviceSectionColorScheme,
-        icon: <PortfolioIconComponentProps/>,
-        serialNo: "08"
-    },
-    {
-        service: "Mutual Funds",
-        description: "As an AMFI-registered distributor, we guide you to mutual funds chosen on merit — not commission. The discipline of pooled, professionally managed investing, made plain and matched patiently to your goals.",
-        benefits: ["Independent fund selection across categories and houses", "SIP discipline that turns patience into compounding", "Transparent, AMFI-registered, conflict-free recommendations"],
-        idealFor: "Investors who want diversified, professionally managed exposure — whether beginning a first SIP or consolidating a scattered fund portfolio.",
-        colorScheme: serviceSectionColorScheme,
-        icon: <MutualFundsIconComponent/>,
-        serialNo: "09"
-    }
-]
+interface TrustSectionPropsTypes {
+    colorScheme: string,
+    headingLayoutProps: HeadingLayoutPropTypes,
+    traitCards: TraitCardLayoutPropTypes[],
+}
 
-export default function AboutUsPage() {
+interface PhilosphySectionPropsTypes {
+    colorScheme: string,
+    headingLayoutProps: HeadingLayoutPropTypes,
+    textCards: TextCardLayoutPropTypes[],
+}
+
+const statSectionColorScheme = "colorScheme3"
+const trustSectionColorScheme = "colorScheme1"
+const philosphySectionColorScheme = "colorScheme2"
+
+const statSectionProps: StatsSectionLayoutPropTypes = {
+    colorScheme: statSectionColorScheme,
+    heading: <p>A record measured in trust, not noise</p>,
+    accentText: "BY THE NUMBER",
+    statCards: [{
+        bigText: "₹ 850",
+        accentText: "cr",
+        description: "Assets Under Management",
+        colorScheme: statSectionColorScheme,
+        // styling: styles.statCard
+    }, {
+        bigText: "300",
+        accentText: "+",
+        description: "Families Guided",
+        colorScheme: statSectionColorScheme,
+        // styling: styles.statCard
+    }, {
+        bigText: "24",
+        accentText: "yrs",
+        description: "Combined Experiance",
+        colorScheme: statSectionColorScheme,
+        // styling: styles.statCard
+    }, {
+        bigText: "98",
+        accentText: "%",
+        description: "Client Retention",
+        colorScheme: statSectionColorScheme,
+        // styling: styles.statCard
+    }]
+}
+
+const trustSectionProps: TrustSectionPropsTypes = {
+    colorScheme: trustSectionColorScheme,
+    headingLayoutProps: {
+        colorScheme: trustSectionColorScheme,
+        heading: <p>Built around a simple promise.</p>,
+        accentText: "WHY CHOOSE INVESGATE",
+        textAlignment: "left",
+        styling: styles.statCard,
+    },
+    traitCards: [{
+        icon: <VerifiedIconComponent/>,
+        serialNo: "",
+        bigText: "Transparent",
+        smallText: "No hidden incentives",
+        bodyText: "Every recommendation explained in plain language.",
+        colorScheme: trustSectionColorScheme,
+        styling: styles.statCard,
+    }, {
+        icon: <CompassIconComponent/>,
+        serialNo: "",
+        bigText: "Independent",
+        smallText: "Free of product quotas",
+        bodyText: "Advice that answers to you, never to a product house.",
+        colorScheme: trustSectionColorScheme,
+        styling: styles.statCard,
+    }, {
+        icon: <CheckIconComponent/>,
+        serialNo: "",
+        bigText: "Simple",
+        smallText: "Plain investing principles",
+        bodyText: "Clarity over complexity, always.",
+        colorScheme: trustSectionColorScheme,
+        styling: styles.statCard,
+    }, {
+        icon: <ClockIconComponent/>,
+        serialNo: "",
+        bigText: "24 years",
+        smallText: "Combinned Experiance",
+        bodyText: "Counsel seasoned across multiple market cycles.",
+        colorScheme: trustSectionColorScheme,
+        styling: styles.statCard,
+    }]
+}
+
+const philosphySectionProps: PhilosphySectionPropsTypes = {
+    colorScheme: philosphySectionColorScheme,
+    headingLayoutProps: {
+        colorScheme: philosphySectionColorScheme,
+        heading: <p>Three convictions guide every recommendation we make.</p>,
+        accentText: "WHAT WE BELIEVE",
+        textAlignment: "left",
+    },
+    textCards: [
+        {
+            accent: "COURAGE",
+            heading: "Buy what others won't",
+            body: "Opportunity is greatest precisely when comfort is lowest. We have the courage to act with conviction when the crowd retreats — because lasting wealth is built in the moments others flinch.",
+            colorScheme: philosphySectionColorScheme
+        },
+        {
+            accent: "VISION",
+            heading: "See what others can't.",
+            body: "We look past the noise of the moment to the structure of the decade. Recognising enduring quality before it becomes consensus is the difference between chasing returns and compounding them.",
+            colorScheme: philosphySectionColorScheme
+        },
+        {
+            accent: "PATIENCE",
+            heading: "Hold when others sell.",
+            body: "Time is the investor's greatest ally and impulse its greatest enemy. We have the patience to let compounding do its quiet work — and the discipline to keep our clients invested through it.",
+            colorScheme: philosphySectionColorScheme
+        }
+    ]
+}
+
+const TeamMember = () => {
     return (
-        <div className={`colorScheme1 ${styles.paddedContainer} paddedContainer`}>
-            {
-                props.map((prop, i) => {
-                        return (
-                            <>
-                                <ServiceDetailCardLayout key={i} service={prop.service} description={prop.description}
-                                                         benefits={prop.benefits} idealFor={prop.idealFor}
-                                                         colorScheme={prop.colorScheme} icon={prop.icon}
-                                                         serialNo={prop.serialNo}/>
+        <div className={`colorScheme3 paddedContainer`}>
+            <div className={`maxWidthContainer`}>
+                <HeadingLayout colorScheme={"colorScheme3"} heading={<p>The people who guard your wealth</p>}
+                               accentText={"LEADERSHIP & EXPERTISE"}
+                               textAlignment={"left"}/>
 
-                                <hr/>
-                            </>
+                <div className={`${styles.teamMemberContainer}`}>
+
+
+                    <div>
+                        <Image src={foundersPhoto} alt={"founder's photo"} className={styles.image}/>
+                    </div>
+
+                    <div>
+                        <p className={"heading6Cursive"}>Vishal Sood</p>
+                        <p className={styles.designation}>FOUNDER AND PRINCIPAL ADVISOR</p>
+                    </div>
+
+                    <p>Vishal founded Invesgate on a belief that wealth advice should be independent, transparent, and
+                        built
+                        to
+                        last. He leads client strategy across equity, alternatives, and long-term wealth planning.</p>
+
+                    <div className={styles.teamMemberBullet}>
+                        <ul>
+                            <li>Two decades across Indian capital markets</li>
+                            <li> MFI-registered mutual fund distribution</li>
+                            <li>Specialist in conviction-led portfolio strategy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+const AboutUsSesction = () => {
+    return (
+        <div className={`colorScheme1 paddedContainer`}>
+            <div className={`maxWidthContainer ${styles.aboutUsContainer}`}>
+
+                <div className={`${styles.aboutUsText}`}>
+                    <HeadingLayout colorScheme={"colorScheme1"}
+                                   heading={<p>An independent practice, operated by Invesgate Edge LLP.</p>}
+                                   accentText={"ABOUT US"} textAlignment={"left"}/>
+
+                    <p className={styles.secondaryText}>Invesgate is the wealth management brand of Invesgate Edge LLP —
+                        a registered partnership built
+                        to
+                        give discerning investors what the conventional industry rarely offers: advice that answers to
+                        the
+                        client, and the client alone.
+                        <br/>
+                        <br/>
+                        As an AMFI-registered practice, we sit on your side of the table. We are not tied to a single
+                        product house, a sales quota, or a quarterly target. Our role is simpler and older than that —
+                        to be
+                        the gatekeepers of your wealth, guarding it with discipline and growing it with conviction.
+                        <br/>
+                        <br/>
+                        We believe investing should be plain and simple. No jargon, no theatre — only a clear strategy,
+                        honestly explained, and patiently executed across market cycles.
+                    </p>
+
+                </div>
+                <Image src={invesgateTeam} alt={"invesgate team"} className={`${styles.teamImage}`}/>
+            </div>
+        </div>
+    )
+}
+
+const TrustSection = ({headingLayoutProps, colorScheme, traitCards}: TrustSectionPropsTypes) => {
+    return (
+        <div className={`${colorScheme} paddedContainer`}>
+            <div className={`maxWidthContainer `}>
+                <HeadingLayout colorScheme={headingLayoutProps.colorScheme}
+                               heading={headingLayoutProps.heading}
+                               accentText={headingLayoutProps.accentText}
+                               textAlignment={headingLayoutProps.textAlignment}/>
+
+                <div className={`${styles.noGapFlex1}`}>
+                    {
+                        traitCards.map((traitCard, i) => {
+                                return <TraitCardLayout key={i} icon={traitCard.icon} serialNo={traitCard.serialNo}
+                                                        bigText={traitCard.bigText} smallText={traitCard.smallText}
+                                                        bodyText={traitCard.bodyText}
+                                                        colorScheme={traitCard.colorScheme} styling={traitCard.styling}/>
+                            }
                         )
                     }
-                )
-            }
+                </div>
+            </div>
         </div>
+    )
+}
+
+const PhilosphySection = ({colorScheme, headingLayoutProps, textCards}: PhilosphySectionPropsTypes) => {
+    return (
+        <div className={`paddedContainer ${colorScheme}`}>
+            <div className={`maxWidthContainer outerFlexContainer`}>
+                <HeadingLayout colorScheme={headingLayoutProps.colorScheme}
+                               heading={headingLayoutProps.heading}
+                               accentText={headingLayoutProps.accentText} textAlignment={"left"}
+                               styling={styles.mediumWidthContainer}/>
+
+                <div className={`${styles.philosphyFlexContainer}`}>
+                    {
+                        textCards.map((textCard, i) => {
+                                return (
+                                    <>
+                                        <TextCardLayout key={i} accent={textCard.accent} heading={textCard.heading}
+                                                        body={textCard.body}
+                                                        colorScheme={textCard.colorScheme}/>
+
+                                        <hr/>
+                                    </>
+                                )
+                            }
+                        )
+                    }
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default function AboutUS() {
+    return (
+        <>
+            <HeaderLayout colorScheme={"colorScheme3"} version={"about us"}/>
+
+            <AboutUsSesction/>
+
+            <StatsSectionLayout colorScheme={statSectionProps.colorScheme} heading={statSectionProps.heading}
+                                accentText={statSectionProps.accentText} statCards={statSectionProps.statCards}/>
+
+            {/*add section here*/}
+            <PhilosphySection textCards={philosphySectionProps.textCards}
+                              headingLayoutProps={philosphySectionProps.headingLayoutProps}
+                              colorScheme={philosphySectionProps.colorScheme}/>
+
+            <TrustSection colorScheme={trustSectionProps.colorScheme}
+                          headingLayoutProps={trustSectionProps.headingLayoutProps}
+                          traitCards={trustSectionProps.traitCards}/>
+
+            <TeamMember/>
+
+            <CTALayout version={"about us"}/>
+        </>
     )
 }

@@ -246,15 +246,13 @@ const financialServicesSectionProps: FinancialServicesSectionPropTypes = {
 }
 
 const comparisonCardPropsDrawbackProps: ComparisonCardLayoutPropTypes = {
-    colorScheme: comparisonCardDrawbacks,
-    headingText: "The Conventional Model",
-    accentText: "Product-led selling",
+    headingText: "Product-led selling",
+    accentText: "The Conventional Model",
     points: ["Commission-driven recommendations", "Opaque fee structures and jargon", "One-size-fits-all portfolios", "Short-term, performance-chasing advice"],
     version: "drawbacks"
 }
 
 const comparisonCardPropsBenefitsProps: ComparisonCardLayoutPropTypes = {
-    // colorScheme: comparisonCardDrawbacks,
     headingText: "Independent counsel",
     accentText: "Product-led selling",
     points: ["Transparent approach in plain language", "Independent advice, free of product quotas", "Plain & simple investing principles", "24 years of experience across cycles"],
