@@ -66,3 +66,11 @@
     width: 100%;
     height: auto;
 }
+
+.light {
+    color: var(--color-text-secondary);
+}
+
+.smallFont {
+    font-size: var(--font-size-s);
+}

@@ -1,5 +1,6 @@
 .accentText {
     color: var(--color-accent);
+    font-size: var(--font-size-s);
 }
 
 .headingText {

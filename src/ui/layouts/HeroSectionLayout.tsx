@@ -8,12 +8,13 @@ export default function HeroSectionLayout() {
         <div className={`${styles.flexContainer}`}>
             <div className={`${styles.detailsConatiner}`}>
                 <div>
-                    <p className={styles.accent}>AMFI Registered · Independent Advisory</p>
+                    <p className={`${styles.accent} ${styles.smallFont}`}>AMFI Registered · Independent Advisory</p>
 
                     <p className={`${styles.gap6} heading2Cursive`}>Independent wealth management built on <span
                         className={`heading2Cursive`}>conviction</span></p>
 
-                    <p className={`${styles.gap6}`}>Helping investors grow, protect, and transfer wealth through
+                    <p className={`${styles.gap6} ${styles.light}`}>Helping investors grow, protect, and transfer wealth
+                        through
                         disciplined, transparent advice — for
                         those who think in decades, not quarters.</p>
 
@@ -25,17 +26,17 @@ export default function HeroSectionLayout() {
                 <div className={`${styles.bottom} ${styles.gap6}`}>
                     <div>
                         <p className={"heading6Cursive"}>24</p>
-                        <p className={`lightNStraight ${styles.gap1}`}>Years Combined Experiance</p>
+                        <p className={`lightSStraight ${styles.gap1} ${styles.light}`}>Years Combined Experiance</p>
                     </div>
 
                     <div>
                         <p className={"heading6Cursive"}>100 %</p>
-                        <p className={`lightNStraight ${styles.gap1}`}>Independent Advice</p>
+                        <p className={`lightSStraight ${styles.gap1} ${styles.light}`}>Independent Advice</p>
                     </div>
 
                     <div>
                         <p className={"heading6Cursive"}>9</p>
-                        <p className={`lightNStraight ${styles.gap1}`}>Wealth disciplines</p>
+                        <p className={`lightSStraight ${styles.gap1} ${styles.light}`}>Wealth disciplines</p>
                     </div>
                 </div>
             </div>
