@@ -6,8 +6,10 @@
 /*}*/
 
 .bodyText {
-    color: inherit;
+    color: var(--color-text-secondary);
     margin-top: var(--dimension-3);
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-light);
 }
 
 .mediumWidth {
