@@ -28,16 +28,17 @@
 
 
     .smallText {
-        font-size: var(--font-size-l);
+        font-size: var(--font-size-s);
         font-family: var(--font-family-straight), sans-serif;
     }
 
     .bodyText {
         color: var(--secondry-text-color);
         font-weight: var(--font-weight-light);
+        font-size: var(--font-size-s);
     }
 
-    .topMargin{
+    .topMargin {
         margin-top: var(--dimension-1);
     }
 
