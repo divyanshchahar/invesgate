@@ -1,7 +1,7 @@
 .container {
     padding: var(--padding-section-l) var(--padding-page);
-
-    background: linear-gradient(180deg, var(--color-blue-3) 0%, var(--color-blue-2) 100%);
+    
+    background: linear-gradient(180deg, var(--color-blue-3) 0%, var(--color-blue-2) 100%), radial-gradient(80% 120% at 50% 0%, rgba(58, 99, 232, .16), transparent 60%);
 
     text-align: center;
 

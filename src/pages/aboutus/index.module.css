@@ -37,6 +37,11 @@
         color: var(--color-text-secondary);
     }
 
+    ul li {
+        font-weight: var(--font-weight-light);
+        margin-top: var(--font-size-m);
+    }
+
     ul li::marker {
         color: var(--color-accent);
     }
@@ -149,6 +154,6 @@
     }
 
     hr:last-child {
-        display:none;
+        display: none;
     }
 }

@@ -428,7 +428,7 @@ const MeetingSection = () => {
                                    heading={<p>A simple conversation, whenever you’re ready.</p>}
                                    accentText={"PRIVATE CONSULTATION"} textAlignment={"left"}/>
 
-                    <p>Sit down with an independent advisor for an unhurried reading of where your wealth stands
+                    <p className={"normalLStraight"}>Sit down with an independent advisor for an unhurried reading of where your wealth stands
                         today — and where disciplined planning could take it. No cost, no obligation.</p>
 
                     <CTAButton ctaText={"Talk to Us"} styling={styles.smallCtaButton}/>

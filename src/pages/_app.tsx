@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import type {AppProps} from "next/app";
 import {Playfair_Display, Source_Sans_3} from "next/font/google";
 import Head from "next/head";
+import FooterLayout from "@/ui/layouts/FooterLayout";
 
 const straightFont = Source_Sans_3({
     variable: "--font-family-straight"
@@ -27,6 +28,7 @@ export default function App({Component, pageProps}: AppProps) {
             >
                 <main>
                     <Component {...pageProps} />
+                    <FooterLayout/>
                 </main>
             </div>
         </>

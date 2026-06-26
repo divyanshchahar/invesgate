@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ba11b2df-943b-4786-a8fd-a4a3395ce884" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/components/TextInputComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/components/TextInputComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/aboutus/index.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/aboutus/index.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/aboutus/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/aboutus/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/layouts/CTALayout.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/layouts/CTALayout.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/layouts/TextCardLayout.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/layouts/TextCardLayout.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +152,12 @@
           <line>123</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/pages/index.tsx</url>
+          <line>421</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
