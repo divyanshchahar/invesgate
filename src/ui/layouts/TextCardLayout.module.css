@@ -15,12 +15,13 @@
     }
 }
 
-.top{
+.top {
     flex-shrink: 0;
 }
 
 .accent {
     color: var(--color-accent);
+    font-size: var(--font-size-s);
 }
 
 .heading {
@@ -30,6 +31,6 @@
 }
 
 .body {
-    color: inherit;
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-light);
 }
-

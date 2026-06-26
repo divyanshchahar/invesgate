@@ -156,9 +156,8 @@ const TeamMember = () => {
                     </div>
 
                     <p>Vishal founded Invesgate on a belief that wealth advice should be independent, transparent, and
-                        built
-                        to
-                        last. He leads client strategy across equity, alternatives, and long-term wealth planning.</p>
+                        built to last. He leads client strategy across equity, alternatives, and long-term wealth
+                        planning.</p>
 
                     <div className={styles.teamMemberBullet}>
                         <ul>
