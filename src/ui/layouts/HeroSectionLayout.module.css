@@ -41,6 +41,7 @@
 
 .accent {
     color: var(--color-accent);
+    font-size: var(--font-size-s);
 }
 
 
@@ -65,4 +66,8 @@
 
     width: 100%;
     height: auto;
+}
+
+.light {
+    color: var(--color-text-secondary);
 }

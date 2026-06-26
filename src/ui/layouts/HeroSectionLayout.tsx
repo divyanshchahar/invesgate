@@ -13,7 +13,8 @@ export default function HeroSectionLayout() {
                     <p className={`${styles.gap6} heading2Cursive`}>Independent wealth management built on <span
                         className={`heading2Cursive`}>conviction</span></p>
 
-                    <p className={`${styles.gap6}`}>Helping investors grow, protect, and transfer wealth through
+                    <p className={`${styles.gap6} ${styles.light}`}>Helping investors grow, protect, and transfer wealth
+                        through
                         disciplined, transparent advice — for
                         those who think in decades, not quarters.</p>
 
