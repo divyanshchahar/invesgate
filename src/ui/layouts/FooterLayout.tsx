@@ -7,6 +7,7 @@ import LinkedinIconComponent from "../../../public/icons/LinkedinIconComponent";
 import TwitterIconComponent from "../../../public/icons/TwitterIconComponent";
 import BigLogoComponent from "../../../public/logo/BigLogoComponent";
 import contactDetails from "../../../src/consts/contactDetails.json"
+import internalLinks from "./../../../src/consts/internalLinks.json"
 
 export interface IconCarrierPropTypes {
     icon: ReactElement;
@@ -34,7 +35,9 @@ const LinkCarrier = ({heading, links}: LinkCarrierPropTypes) => {
         {links.map((link, i) => {
             return (
                 <>
-                    <Link href={link.linkAddress} key={i} className={styles.paddingTopSmall}>{link.linkText}</Link>
+                    <div>
+                        <Link href={link.linkAddress} key={i} className={styles.paddingTopSmall}>{link.linkText}</Link>
+                    </div>
                 </>
             )
         })}
@@ -50,7 +53,7 @@ const OfficeDetails = () => {
         <p className={styles.paddingTopSmall}>{contactDetails.mobileNumber}</p>
 
         <p className={styles.paddingTopSmall}>{contactDetails.email}</p>
-        
+
         <button className={`straightLink ${styles.paddingTopSmall}`}>Talk to Us</button>
     </div>
 }
@@ -74,17 +77,22 @@ export default function FooterLayout() {
                 </div>
 
                 <div className={`${styles.textContainer}`}>
-                    <LinkCarrier heading={"NAVIGATION"} links={[{linkText: "Home", linkAddress: ""}, {
-                        linkText: "About Us",
-                        linkAddress: ""
-                    }, {
-                        linkText: "Services",
-                        linkAddress: ""
-                    }, {
-                        linkText: "Contact Us",
-                        linkAddress: ""
-                    }
-                    ]}/>
+                    <LinkCarrier heading={"NAVIGATION"} links={
+                        [
+                            {linkText: "Home", linkAddress: internalLinks.home},
+                            {
+                                linkText: "About Us",
+                                linkAddress: internalLinks.aboutUS
+                            },
+                            {
+                                linkText: "Services",
+                                linkAddress: internalLinks.services
+                            },
+                            {
+                                linkText: "Contact Us",
+                                linkAddress: ""
+                            }
+                        ]}/>
 
                     <LinkCarrier heading={"SERVICES"} links={[{
                         linkText: "Alternative Investment Funds",
