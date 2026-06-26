@@ -1,11 +1,15 @@
-.container {
-    padding: var(--padding-section-l) var(--padding-page);
-    background-color: var(--color-background);
-    color: var(--color-text-primary);
+/*.container {*/
+/*    !*padding: var(--padding-section-l) var(--padding-page);*!*/
+/*    background-color: var(--color-background);*/
+/*    color: var(--color-text-primary);*/
 
-}
+/*}*/
 
 .bodyText {
     color: inherit;
     margin-top: var(--dimension-3);
+}
+
+.mediumWidth {
+    max-width: var(--max-widht-m);
 }

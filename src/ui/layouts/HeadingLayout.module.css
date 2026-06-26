@@ -9,6 +9,7 @@
 
         font-family: var(--font-family-cursive), serif;
         font-size: var(--font-size-h5);
+        line-height: var(--line-height-heading);
 
         span {
             color: inherit;

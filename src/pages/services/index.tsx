@@ -10,6 +10,7 @@ import MutualFundsIconComponent from "../../../public/icons/MutualFundsIconCompo
 import styles from "./index.module.css"
 import HeaderLayout from "@/ui/layouts/HeaderLayout";
 import CTALayout from "@/ui/layouts/CTALayout";
+import InsuranceIconComponent from "../../../public/icons/InsuranceIconComponent";
 
 const serviceSectionColorScheme = "colorScheme1";
 
@@ -34,7 +35,7 @@ const props: ServiceDetailCardLayoutPropsTypes[] = [{
     {
         service: "Loans & Credit Solutions",
         description: "Structured borrowing against your assets — unlocking liquidity without disturbing a well-built portfolio or forcing untimely sales",
-        benefits: ["Liquidity without liquidating long-term holdings", "Transparent rationale behind every position", "Structures matched to your cash-flow and goals"],
+        benefits: ["Liquidity without liquidating long-term holdings", "Loans against securities, property, and other assets", "Structures matched to your cash-flow and goals"],
         idealFor: "Asset-rich investors needing flexible liquidity for opportunities or obligations, while keeping investments intact..",
         colorScheme: serviceSectionColorScheme,
         icon: <LoanIconComponent/>,
@@ -46,7 +47,7 @@ const props: ServiceDetailCardLayoutPropsTypes[] = [{
         benefits: ["Life, health, and asset protection reviewed holistically", "Cover sized to your liabilities and dependents", "Recommendations free of product-push incentives"],
         idealFor: "Families and earners who want their protection to be deliberate and right-sized — never over-sold.",
         colorScheme: serviceSectionColorScheme,
-        icon: <LoanIconComponent/>,
+        icon: <InsuranceIconComponent/>,
         serialNo: "04"
     },
     {
@@ -124,3 +125,7 @@ export default function AboutUsPage() {
         </>
     )
 }
+
+// TODO
+// 1. How we work section is not even included in figma add that section
+// 2. The las CTA section does not matches claude

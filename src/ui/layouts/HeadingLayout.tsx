@@ -1,7 +1,7 @@
 import styles from "./HeadingLayout.module.css"
 import {ReactElement} from "react";
 
-export interface HeadingSectionLayoutPropTypes {
+export interface HeadingLayoutPropTypes {
     colorScheme: string,
     heading: ReactElement,
     accentText: string,
@@ -15,7 +15,7 @@ export default function HeadingLayout({
                                           textAlignment,
                                           styling,
                                           colorScheme
-                                      }: HeadingSectionLayoutPropTypes) {
+                                      }: HeadingLayoutPropTypes) {
     return (
         <div className={`${colorScheme} ${styling} ${textAlignment === "center" ? styles.center : styles.left} `}>
             <p className={styles.accentText}>{accentText}</p>
