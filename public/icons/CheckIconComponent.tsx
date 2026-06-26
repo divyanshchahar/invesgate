@@ -1,5 +1,5 @@
 export interface CheckIconComponentPropTypes {
-    stying?: string,
+    styling?: string,
 }
 
 export default function CheckIconComponent({styling}: CheckIconComponentPropTypes) {
